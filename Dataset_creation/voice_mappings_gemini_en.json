@@ -1,0 +1,152 @@
+[
+  {
+    "speaker_name": "Doctor",
+    "voice_id": "Charon",
+    "voice_name": "Charon",
+    "voice_description": "Informative voice with peninsular Spanish accent, suitable for authoritative medical professionals"
+  },
+  {
+    "speaker_name": "Patient",
+    "voice_id": "Achird",
+    "voice_name": "Achird",
+    "voice_description": "Friendly voice with peninsular Spanish accent, suitable for conversational patients who tend to mispronounce medication names"
+  },
+  {
+    "speaker_name": "Cardiologist",
+    "voice_id": "Rasalgethi",
+    "voice_name": "Rasalgethi",
+    "voice_description": "Informative voice with peninsular Spanish accent for cardiologists"
+  },
+  {
+    "speaker_name": "Oncologist",
+    "voice_id": "Kore",
+    "voice_name": "Kore",
+    "voice_description": "Firm voice with peninsular Spanish accent for oncologists"
+  },
+  {
+    "speaker_name": "Radiologist",
+    "voice_id": "Alnilam",
+    "voice_name": "Alnilam",
+    "voice_description": "Firm voice with peninsular Spanish accent for radiologists"
+  },
+  {
+    "speaker_name": "Neurosurgeon",
+    "voice_id": "Gacrux",
+    "voice_name": "Gacrux",
+    "voice_description": "Mature voice with peninsular Spanish accent for neurosurgeons"
+  },
+  {
+    "speaker_name": "Neurologist",
+    "voice_id": "Sadaltager",
+    "voice_name": "Sadaltager",
+    "voice_description": "Knowledgeable voice for neurologists"
+  },
+  {
+    "speaker_name": "Resident",
+    "voice_id": "Zephyr",
+    "voice_name": "Zephyr",
+    "voice_description": "Bright voice for young medical residents"
+  },
+  {
+    "speaker_name": "Nurse",
+    "voice_id": "Pulcherrima",
+    "voice_name": "Pulcherrima",
+    "voice_description": "Forward voice for nurses"
+  },
+  {
+    "speaker_name": "Psychiatrist",
+    "voice_id": "Sulafat",
+    "voice_name": "Sulafat",
+    "voice_description": "Warm voice for psychiatrists"
+  },
+  {
+    "speaker_name": "Nephrologist",
+    "voice_id": "Orus",
+    "voice_name": "Orus",
+    "voice_description": "Firm voice for nephrologists"
+  },
+  {
+    "speaker_name": "Infectious Disease Specialist",
+    "voice_id": "Fenrir",
+    "voice_name": "Fenrir",
+    "voice_description": "Excitable voice for infectious disease specialists"
+  },
+  {
+    "speaker_name": "Surgeon",
+    "voice_id": "Algenib",
+    "voice_name": "Algenib",
+    "voice_description": "Gravelly voice for surgeons"
+  },
+  {
+    "speaker_name": "Anesthesiologist",
+    "voice_id": "Schedar",
+    "voice_name": "Schedar",
+    "voice_description": "Even voice for anesthesiologists"
+  },
+  {
+    "speaker_name": "Perfusionist",
+    "voice_id": "Iapetus",
+    "voice_name": "Iapetus",
+    "voice_description": "Clear voice for perfusionists"
+  },
+  {
+    "speaker_name": "Endocrinologist",
+    "voice_id": "Erinome",
+    "voice_name": "Erinome",
+    "voice_description": "Clear voice for endocrinologists"
+  },
+  {
+    "speaker_name": "Gastroenterologist",
+    "voice_id": "Algieba",
+    "voice_name": "Algieba",
+    "voice_description": "Smooth voice for gastroenterologists"
+  },
+  {
+    "speaker_name": "Endoscopist",
+    "voice_id": "Despina",
+    "voice_name": "Despina",
+    "voice_description": "Smooth voice for endoscopists"
+  },
+  {
+    "speaker_name": "Rheumatologist",
+    "voice_id": "Vindemiatrix",
+    "voice_name": "Vindemiatrix",
+    "voice_description": "Gentle voice for rheumatologists"
+  },
+  {
+    "speaker_name": "Pulmonologist",
+    "voice_id": "Enceladus",
+    "voice_name": "Enceladus",
+    "voice_description": "Breathy voice for pulmonologists"
+  },
+  {
+    "speaker_name": "Intensivist",
+    "voice_id": "Puck",
+    "voice_name": "Puck",
+    "voice_description": "Upbeat voice for intensivists"
+  },
+  {
+    "speaker_name": "Dermatologist",
+    "voice_id": "Zubenelgenubi",
+    "voice_name": "Zubenelgenubi",
+    "voice_description": "Casual voice for dermatologists"
+  },
+  {
+    "speaker_name": "Father",
+    "voice_id": "Achernar",
+    "voice_name": "Achernar",
+    "voice_description": "Soft voice with peninsular Spanish accent for concerned fathers who tend to mispronounce medication names"
+  },
+  {
+    "speaker_name": "Mother",
+    "voice_id": "Leda",
+    "voice_name": "Leda",
+    "voice_description": "Youthful voice with peninsular Spanish accent for distressed mothers who tend to mispronounce medication names"
+  },
+  {
+    "speaker_name": "Family Member",
+    "voice_id": "Sadachbia",
+    "voice_name": "Sadachbia",
+    "voice_description": "Lively voice with peninsular Spanish accent for family members who tend to mispronounce medication names"
+  }
+]

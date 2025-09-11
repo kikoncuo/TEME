@@ -1,25 +1,45 @@
 [
   {
-    "scenario_id": "test_cardiology_01",
-    "title": "Test Cardiología",
-    "description": "Test cardiology consultation",
-    "context": "Cardiology office consultation",
-    "participants": ["Cardiólogo", "Paciente"],
-    "target_duration": 30,
-    "difficulty_level": "hard",
-    "language": "es",
-    "domain": "cardiology"
+    "scenario_id": "medical_consultation_01",
+    "title": "Medical Consultation",
+    "description": "A doctor consulting with a patient about symptoms",
+    "context": "A medical office where a doctor is examining a patient with flu-like symptoms",
+    "participants": [
+      "Doctor",
+      "Patient"
+    ],
+    "target_duration": 90,
+    "difficulty_level": "medium",
+    "language": "en",
+    "domain": "medical"
   },
   {
-    "scenario_id": "test_oncology_01",
-    "title": "Test Oncología",
-    "description": "Test oncology with nurse",
-    "context": "Oncology room consultation",
-    "participants": ["Oncólogo", "Enfermera", "Paciente"],
-    "target_duration": 25,
-    "difficulty_level": "hard",
-    "language": "es",
-    "domain": "oncology"
+    "scenario_id": "business_meeting_01",
+    "title": "Team Status Meeting",
+    "description": "A brief team meeting discussing project progress",
+    "context": "A conference room where team members discuss weekly progress",
+    "participants": [
+      "Manager",
+      "Developer",
+      "Designer"
+    ],
+    "target_duration": 120,
+    "difficulty_level": "medium",
+    "language": "en",
+    "domain": "business"
+  },
+  {
+    "scenario_id": "casual_friends_01",
+    "title": "Friends Planning Weekend",
+    "description": "Two friends discussing weekend plans",
+    "context": "A casual phone conversation between friends",
+    "participants": [
+      "Alex",
+      "Sam"
+    ],
+    "target_duration": 75,
+    "difficulty_level": "easy",
+    "language": "en",
+    "domain": "casual"
   }
 ]
-

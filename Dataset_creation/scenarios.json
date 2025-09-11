@@ -20,27 +20,5 @@
     "difficulty_level": "hard",
     "language": "es",
     "domain": "oncology"
-  },
-  {
-    "scenario_id": "neurosurgery_consultation_01",
-    "title": "Consulta Neurocirugía - Glioblastoma Multiforme",
-    "description": "Neurocirujano explica cirugía de glioblastoma con awake craniotomía",
-    "context": "Consulta de neurocirugía donde el neurocirujano explica al paciente con glioblastoma multiforme grado IV las opciones de resección tumoral con mapeo cortical awake, discutiendo riesgos de afasia, hemiparesia, y la necesidad de dexametasona para controlar el edema cerebral. El paciente interrumpe con preguntas sobre temozolomida y radioterapia hipofraccionada.",
-    "participants": ["Neurocirujano", "Paciente"],
-    "target_duration": 200,
-    "difficulty_level": "hard",
-    "language": "es",
-    "domain": "neurosurgery"
-  },
-  {
-    "scenario_id": "emergency_room_01",
-    "title": "Urgencias - Síndrome Coronario Agudo",
-    "description": "Equipo de emergencias maneja infarto agudo de miocardio",
-    "context": "Sala de emergencias con ruido de monitores cardíacos y ventiladores. Cardiólogo de guardia, residente de emergencias y enfermera discuten el manejo de infarto agudo de miocardio con elevación del ST. Debaten sobre angioplastia primaria vs trombolisis con alteplasa, anticoagulación con enoxaparina, y el paciente grita de dolor mientras se prepara para el cateterismo cardíaco urgente.",
-    "participants": ["Cardiólogo", "Residente", "Enfermera", "Paciente"],
-    "target_duration": 220,
-    "difficulty_level": "hard",
-    "language": "es",
-    "domain": "emergency_medicine"
   }
 ]

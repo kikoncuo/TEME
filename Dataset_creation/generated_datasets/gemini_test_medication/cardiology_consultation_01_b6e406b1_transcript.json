@@ -1,0 +1,116 @@
+{
+  "scenario_id": "cardiology_consultation_01",
+  "title": "Consulta Cardiología - Arritmias Complejas",
+  "context": "Consulta especializada de cardiología donde el cardiólogo explica al paciente las arritmias ventriculares detectadas en su Holter, discute opciones de ablación por catéter, y prescribe warfarina con monitorización de INR. El paciente interrumpe constantemente con preguntas sobre los efectos secundarios de la amiodarona y digoxina.",
+  "turns": [
+    {
+      "speaker": "Cardiólogo",
+      "text": "Buenas tardes, señor García. He revisado detenidamente los resultados de su Holter de 48 horas, y hemos detectado varias arritmias ventriculares complejas, sobre todo episodios de taquicardia ventricular no sostenida. ¿Cómo se ha sentido estos días?",
+      "duration_estimate": 15.0,
+      "voice_characteristics": "profesional"
+    },
+    {
+      "speaker": "Paciente",
+      "text": "Pues, doctor, la verdad, he estado bastante nervioso. A veces siento como una especie de golpe fuerte en el pecho y luego me mareo un poco. ¿Eso es peligroso? ¿Me voy a infartar?",
+      "duration_estimate": 11.0,
+      "voice_characteristics": "anxious"
+    },
+    {
+      "speaker": "Cardiólogo",
+      "text": "Comprendo su preocupación, es completamente normal sentirse así. Las arritmias ventriculares pueden causar esos síntomas, pero un infarto es otra cosa. Lo importante es que hemos detectado el problema y vamos a tratarlo. Me gustaría hablarle de las opciones terapéuticas, incluyendo la ablación por catéter.",
+      "duration_estimate": 16.0,
+      "voice_characteristics": "reassuring"
+    },
+    {
+      "speaker": "Paciente",
+      "text": "Antes de eso, doctor, ¿me puede explicar exactamente qué es una ablación? Es que he leído cosas y, bueno, suena un poco invasivo. ¿Duele mucho? ¿Hay algún riesgo serio?",
+      "duration_estimate": 13.0,
+      "voice_characteristics": "curious"
+    },
+    {
+      "speaker": "Cardiólogo",
+      "text": "Claro, la ablación es un procedimiento mínimamente invasivo. Introducimos un catéter por la vena femoral hasta el corazón, identificamos el foco de la arritmia y lo destruimos con radiofrecuencia. Los riesgos existen, como perforación cardíaca, taponamiento o bloqueo auriculoventricular, pero la incidencia es baja y los beneficios suelen ser mayores, sobre todo en arritmias refractarias.",
+      "duration_estimate": 19.0,
+      "voice_characteristics": "authoritative"
+    },
+    {
+      "speaker": "Paciente",
+      "text": "Ya... ¿Y qué pasa si opto por medicación? Usted me mencionó la amiodarona la vez pasada. He leído que puede afectar la tiroides y los pulmones. ¿Eso es común? ¿Me puede dejar ciego o algo así?",
+      "duration_estimate": 15.0,
+      "voice_characteristics": "questioning"
+    },
+    {
+      "speaker": "Cardiólogo",
+      "text": "La amiodarona es eficaz, pero tiene efectos adversos potencialmente serios: disfunción tiroidea, fibrosis pulmonar, alteraciones hepáticas, depósitos corneales, incluso bradicardia y QT largo. Por eso, monitorizamos con analítica periódica, radiografía de tórax y controles oftalmológicos. Sin embargo, la ceguera es extremadamente rara.",
+      "duration_estimate": 17.0,
+      "voice_characteristics": "professional"
+    },
+    {
+      "speaker": "Paciente",
+      "text": "¿Y la digoxina? Porque también me mencionaron ese nombre en urgencias. ¿No causa intoxicación fácil? ¿Eso cómo se nota, doctor?",
+      "duration_estimate": 11.0,
+      "voice_characteristics": "questioning"
+    },
+    {
+      "speaker": "Cardiólogo",
+      "text": "Correcto, la digoxina puede provocar intoxicación, sobre todo en insuficiencia renal o si hay hipopotasemia. Los síntomas incluyen náuseas, visión borrosa, arritmias extras, e incluso confusión. Por eso, ajustamos la dosis y vigilamos sus niveles plasmáticos y función renal.",
+      "duration_estimate": 14.0,
+      "voice_characteristics": "authoritative"
+    },
+    {
+      "speaker": "Paciente",
+      "text": "Vaya, entonces cada medicamento tiene su riesgo. ¿Y si mejor me quedo sin tomar nada? La verdad, me da miedo todo esto.",
+      "duration_estimate": 9.0,
+      "voice_characteristics": "frustrated"
+    },
+    {
+      "speaker": "Cardiólogo",
+      "text": "Entiendo su inquietud, pero dejar la arritmia sin tratar implica riesgos significativos, como deterioro de la función ventricular, síncopes o incluso muerte súbita. Por eso, quiero proponerle también anticoagulación con warfarina para prevenir tromboembolismos, especialmente si hay episodios auriculares asociados.",
+      "duration_estimate": 16.0,
+      "voice_characteristics": "emphatic"
+    },
+    {
+      "speaker": "Paciente",
+      "text": "¿La warfarina no es la que requiere pinchazos y controles constantes? ¿Qué pasa si me paso de dosis? ¿Me puedo desangrar?",
+      "duration_estimate": 11.0,
+      "voice_characteristics": "anxious"
+    },
+    {
+      "speaker": "Cardiólogo",
+      "text": "Debe realizarse controles frecuentes de INR para mantenerlo entre 2 y 3. Si el INR se eleva mucho, sí hay riesgo de hemorragia, pero ajustamos la dosis semanalmente y le daremos una cartilla para registrar sus valores. Además, le explicaré señales de alarma como sangrado nasal, hematomas o hematuria.",
+      "duration_estimate": 16.0,
+      "voice_characteristics": "reassuring"
+    },
+    {
+      "speaker": "Paciente",
+      "text": "Perdone que insista, doctor, pero… ¿no hay alguna pastilla más moderna, tipo los nuevos anticoagulantes, el dabigatrán o la apixabán? Es que me da miedo lo de la warfarina.",
+      "duration_estimate": 13.0,
+      "voice_characteristics": "questioning"
+    },
+    {
+      "speaker": "Cardiólogo",
+      "text": "Buena pregunta. Los anticoagulantes orales directos, como dabigatrán o apixabán, son alternativas, pero en arritmias ventriculares complejas y ciertas comorbilidades, la warfarina sigue siendo el estándar. Si no hay contraindicaciones, podríamos valorar el cambio más adelante.",
+      "duration_estimate": 15.0,
+      "voice_characteristics": "confident"
+    },
+    {
+      "speaker": "Paciente",
+      "text": "Vale, doctor, confío en usted. Pero, por favor, ¿me lo puede escribir todo en un papel? Y, um, ¿podemos empezar despacio? Es que todo esto me abruma.",
+      "duration_estimate": 12.0,
+      "voice_characteristics": "nervous"
+    },
+    {
+      "speaker": "Cardiólogo",
+      "text": "Por supuesto, le haré un resumen detallado con los pasos a seguir, efectos secundarios y teléfonos de contacto. Vamos a ir con calma y cualquier duda que tenga, me la puede consultar en cualquier momento.",
+      "duration_estimate": 13.0,
+      "voice_characteristics": "warm"
+    }
+  ],
+  "metadata": {
+    "word_count": 594,
+    "turn_count": 17,
+    "avg_turn_length": 34.94117647058823
+  },
+  "estimated_total_duration": 237.6,
+  "generated_at": "2024-06-11T15:56:00Z"
+}

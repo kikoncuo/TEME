@@ -1,0 +1,294 @@
+{
+  "entry_id": "cardiology_consultation_01_b6e406b1",
+  "conversation": {
+    "scenario_id": "cardiology_consultation_01",
+    "title": "Consulta Cardiología - Arritmias Complejas",
+    "context": "Consulta especializada de cardiología donde el cardiólogo explica al paciente las arritmias ventriculares detectadas en su Holter, discute opciones de ablación por catéter, y prescribe warfarina con monitorización de INR. El paciente interrumpe constantemente con preguntas sobre los efectos secundarios de la amiodarona y digoxina.",
+    "turns": [
+      {
+        "speaker": "Cardiólogo",
+        "text": "Buenas tardes, señor García. He revisado detenidamente los resultados de su Holter de 48 horas, y hemos detectado varias arritmias ventriculares complejas, sobre todo episodios de taquicardia ventricular no sostenida. ¿Cómo se ha sentido estos días?",
+        "duration_estimate": 15.0,
+        "voice_characteristics": "profesional"
+      },
+      {
+        "speaker": "Paciente",
+        "text": "Pues, doctor, la verdad, he estado bastante nervioso. A veces siento como una especie de golpe fuerte en el pecho y luego me mareo un poco. ¿Eso es peligroso? ¿Me voy a infartar?",
+        "duration_estimate": 11.0,
+        "voice_characteristics": "anxious"
+      },
+      {
+        "speaker": "Cardiólogo",
+        "text": "Comprendo su preocupación, es completamente normal sentirse así. Las arritmias ventriculares pueden causar esos síntomas, pero un infarto es otra cosa. Lo importante es que hemos detectado el problema y vamos a tratarlo. Me gustaría hablarle de las opciones terapéuticas, incluyendo la ablación por catéter.",
+        "duration_estimate": 16.0,
+        "voice_characteristics": "reassuring"
+      },
+      {
+        "speaker": "Paciente",
+        "text": "Antes de eso, doctor, ¿me puede explicar exactamente qué es una ablación? Es que he leído cosas y, bueno, suena un poco invasivo. ¿Duele mucho? ¿Hay algún riesgo serio?",
+        "duration_estimate": 13.0,
+        "voice_characteristics": "curious"
+      },
+      {
+        "speaker": "Cardiólogo",
+        "text": "Claro, la ablación es un procedimiento mínimamente invasivo. Introducimos un catéter por la vena femoral hasta el corazón, identificamos el foco de la arritmia y lo destruimos con radiofrecuencia. Los riesgos existen, como perforación cardíaca, taponamiento o bloqueo auriculoventricular, pero la incidencia es baja y los beneficios suelen ser mayores, sobre todo en arritmias refractarias.",
+        "duration_estimate": 19.0,
+        "voice_characteristics": "authoritative"
+      },
+      {
+        "speaker": "Paciente",
+        "text": "Ya... ¿Y qué pasa si opto por medicación? Usted me mencionó la amiodarona la vez pasada. He leído que puede afectar la tiroides y los pulmones. ¿Eso es común? ¿Me puede dejar ciego o algo así?",
+        "duration_estimate": 15.0,
+        "voice_characteristics": "questioning"
+      },
+      {
+        "speaker": "Cardiólogo",
+        "text": "La amiodarona es eficaz, pero tiene efectos adversos potencialmente serios: disfunción tiroidea, fibrosis pulmonar, alteraciones hepáticas, depósitos corneales, incluso bradicardia y QT largo. Por eso, monitorizamos con analítica periódica, radiografía de tórax y controles oftalmológicos. Sin embargo, la ceguera es extremadamente rara.",
+        "duration_estimate": 17.0,
+        "voice_characteristics": "professional"
+      },
+      {
+        "speaker": "Paciente",
+        "text": "¿Y la digoxina? Porque también me mencionaron ese nombre en urgencias. ¿No causa intoxicación fácil? ¿Eso cómo se nota, doctor?",
+        "duration_estimate": 11.0,
+        "voice_characteristics": "questioning"
+      },
+      {
+        "speaker": "Cardiólogo",
+        "text": "Correcto, la digoxina puede provocar intoxicación, sobre todo en insuficiencia renal o si hay hipopotasemia. Los síntomas incluyen náuseas, visión borrosa, arritmias extras, e incluso confusión. Por eso, ajustamos la dosis y vigilamos sus niveles plasmáticos y función renal.",
+        "duration_estimate": 14.0,
+        "voice_characteristics": "authoritative"
+      },
+      {
+        "speaker": "Paciente",
+        "text": "Vaya, entonces cada medicamento tiene su riesgo. ¿Y si mejor me quedo sin tomar nada? La verdad, me da miedo todo esto.",
+        "duration_estimate": 9.0,
+        "voice_characteristics": "frustrated"
+      },
+      {
+        "speaker": "Cardiólogo",
+        "text": "Entiendo su inquietud, pero dejar la arritmia sin tratar implica riesgos significativos, como deterioro de la función ventricular, síncopes o incluso muerte súbita. Por eso, quiero proponerle también anticoagulación con warfarina para prevenir tromboembolismos, especialmente si hay episodios auriculares asociados.",
+        "duration_estimate": 16.0,
+        "voice_characteristics": "emphatic"
+      },
+      {
+        "speaker": "Paciente",
+        "text": "¿La warfarina no es la que requiere pinchazos y controles constantes? ¿Qué pasa si me paso de dosis? ¿Me puedo desangrar?",
+        "duration_estimate": 11.0,
+        "voice_characteristics": "anxious"
+      },
+      {
+        "speaker": "Cardiólogo",
+        "text": "Debe realizarse controles frecuentes de INR para mantenerlo entre 2 y 3. Si el INR se eleva mucho, sí hay riesgo de hemorragia, pero ajustamos la dosis semanalmente y le daremos una cartilla para registrar sus valores. Además, le explicaré señales de alarma como sangrado nasal, hematomas o hematuria.",
+        "duration_estimate": 16.0,
+        "voice_characteristics": "reassuring"
+      },
+      {
+        "speaker": "Paciente",
+        "text": "Perdone que insista, doctor, pero… ¿no hay alguna pastilla más moderna, tipo los nuevos anticoagulantes, el dabigatrán o la apixabán? Es que me da miedo lo de la warfarina.",
+        "duration_estimate": 13.0,
+        "voice_characteristics": "questioning"
+      },
+      {
+        "speaker": "Cardiólogo",
+        "text": "Buena pregunta. Los anticoagulantes orales directos, como dabigatrán o apixabán, son alternativas, pero en arritmias ventriculares complejas y ciertas comorbilidades, la warfarina sigue siendo el estándar. Si no hay contraindicaciones, podríamos valorar el cambio más adelante.",
+        "duration_estimate": 15.0,
+        "voice_characteristics": "confident"
+      },
+      {
+        "speaker": "Paciente",
+        "text": "Vale, doctor, confío en usted. Pero, por favor, ¿me lo puede escribir todo en un papel? Y, um, ¿podemos empezar despacio? Es que todo esto me abruma.",
+        "duration_estimate": 12.0,
+        "voice_characteristics": "nervous"
+      },
+      {
+        "speaker": "Cardiólogo",
+        "text": "Por supuesto, le haré un resumen detallado con los pasos a seguir, efectos secundarios y teléfonos de contacto. Vamos a ir con calma y cualquier duda que tenga, me la puede consultar en cualquier momento.",
+        "duration_estimate": 13.0,
+        "voice_characteristics": "warm"
+      }
+    ],
+    "metadata": {
+      "word_count": 594,
+      "turn_count": 17,
+      "avg_turn_length": 34.94117647058823
+    },
+    "estimated_total_duration": 237.6,
+    "generated_at": "2024-06-11T15:56:00Z"
+  },
+  "voice_mappings": [
+    {
+      "speaker_name": "Doctor",
+      "voice_id": "Charon",
+      "voice_name": "Charon",
+      "voice_description": "Voz informativa con acento español peninsular, adecuada para médicos profesionales autoritarios"
+    },
+    {
+      "speaker_name": "Paciente",
+      "voice_id": "Achird",
+      "voice_name": "Achird",
+      "voice_description": "Voz amigable con acento español peninsular, adecuada para pacientes conversacionales que suelen pronunciar mal los nombres de medicamentos"
+    },
+    {
+      "speaker_name": "Cardiólogo",
+      "voice_id": "Rasalgethi",
+      "voice_name": "Rasalgethi",
+      "voice_description": "Voz informativa con acento español peninsular para cardiólogos"
+    },
+    {
+      "speaker_name": "Oncólogo",
+      "voice_id": "Kore",
+      "voice_name": "Kore",
+      "voice_description": "Voz firme con acento español peninsular para oncólogos"
+    },
+    {
+      "speaker_name": "Radio-oncólogo",
+      "voice_id": "Alnilam",
+      "voice_name": "Alnilam",
+      "voice_description": "Voz firme con acento español peninsular para radio-oncólogos"
+    },
+    {
+      "speaker_name": "Neurocirujano",
+      "voice_id": "Gacrux",
+      "voice_name": "Gacrux",
+      "voice_description": "Voz madura con acento español peninsular para neurocirujanos"
+    },
+    {
+      "speaker_name": "Neurólogo",
+      "voice_id": "Sadaltager",
+      "voice_name": "Sadaltager",
+      "voice_description": "Voz conocedora con acento español peninsular para neurólogos"
+    },
+    {
+      "speaker_name": "Residente",
+      "voice_id": "Zephyr",
+      "voice_name": "Zephyr",
+      "voice_description": "Voz brillante con acento español peninsular para residentes médicos jóvenes"
+    },
+    {
+      "speaker_name": "Enfermera",
+      "voice_id": "Pulcherrima",
+      "voice_name": "Pulcherrima",
+      "voice_description": "Voz directa con acento español peninsular para enfermeras profesionales"
+    },
+    {
+      "speaker_name": "Psiquiatra",
+      "voice_id": "Sulafat",
+      "voice_name": "Sulafat",
+      "voice_description": "Voz cálida con acento español peninsular para psiquiatras"
+    },
+    {
+      "speaker_name": "Nefrólogo",
+      "voice_id": "Orus",
+      "voice_name": "Orus",
+      "voice_description": "Voz firme con acento español peninsular para nefrólogos"
+    },
+    {
+      "speaker_name": "Infectólogo",
+      "voice_id": "Fenrir",
+      "voice_name": "Fenrir",
+      "voice_description": "Voz excitada con acento español peninsular para infectólogos"
+    },
+    {
+      "speaker_name": "Cirujano",
+      "voice_id": "Algenib",
+      "voice_name": "Algenib",
+      "voice_description": "Voz grave con acento español peninsular para cirujanos"
+    },
+    {
+      "speaker_name": "Anestesiólogo",
+      "voice_id": "Schedar",
+      "voice_name": "Schedar",
+      "voice_description": "Voz pareja con acento español peninsular para anestesiólogos"
+    },
+    {
+      "speaker_name": "Perfusionista",
+      "voice_id": "Iapetus",
+      "voice_name": "Iapetus",
+      "voice_description": "Voz clara con acento español peninsular para perfusionistas"
+    },
+    {
+      "speaker_name": "Endocrinólogo",
+      "voice_id": "Erinome",
+      "voice_name": "Erinome",
+      "voice_description": "Voz clara con acento español peninsular para endocrinólogos"
+    },
+    {
+      "speaker_name": "Gastroenterólogo",
+      "voice_id": "Algieba",
+      "voice_name": "Algieba",
+      "voice_description": "Voz suave con acento español peninsular para gastroenterólogos"
+    },
+    {
+      "speaker_name": "Endoscopista",
+      "voice_id": "Despina",
+      "voice_name": "Despina",
+      "voice_description": "Voz suave con acento español peninsular para endoscopistas"
+    },
+    {
+      "speaker_name": "Reumatólogo",
+      "voice_id": "Vindemiatrix",
+      "voice_name": "Vindemiatrix",
+      "voice_description": "Voz gentil con acento español peninsular para reumatólogos"
+    },
+    {
+      "speaker_name": "Neumólogo",
+      "voice_id": "Enceladus",
+      "voice_name": "Enceladus",
+      "voice_description": "Voz respiratoria con acento español peninsular para neumólogos"
+    },
+    {
+      "speaker_name": "Intensivista",
+      "voice_id": "Puck",
+      "voice_name": "Puck",
+      "voice_description": "Voz animada con acento español peninsular para intensivistas"
+    },
+    {
+      "speaker_name": "Dermatólogo",
+      "voice_id": "Zubenelgenubi",
+      "voice_name": "Zubenelgenubi",
+      "voice_description": "Voz casual con acento español peninsular para dermatólogos"
+    },
+    {
+      "speaker_name": "Padre",
+      "voice_id": "Achernar",
+      "voice_name": "Achernar",
+      "voice_description": "Voz suave con acento español peninsular para padres preocupados que suelen pronunciar mal los nombres de medicamentos"
+    },
+    {
+      "speaker_name": "Madre",
+      "voice_id": "Leda",
+      "voice_name": "Leda",
+      "voice_description": "Voz juvenil con acento español peninsular para madres angustiadas que suelen pronunciar mal los nombres de medicamentos"
+    },
+    {
+      "speaker_name": "Familiar",
+      "voice_id": "Sadachbia",
+      "voice_name": "Sadachbia",
+      "voice_description": "Voz vivaz con acento español peninsular para familiares preocupados que suelen pronunciar mal los nombres de medicamentos"
+    }
+  ],
+  "audio_config": {
+    "provider": "gemini",
+    "elevenlabs_config": {
+      "model_id": "eleven_v3",
+      "output_format": "mp3_44100_128",
+      "stability": 0.5,
+      "use_speaker_boost": true,
+      "apply_text_normalization": "auto",
+      "use_audio_tags": true,
+      "language_code": null
+    },
+    "gemini_config": {
+      "model": "gemini-2.5-flash-preview-tts",
+      "output_format": "wav",
+      "voice_name": null,
+      "language_code": null,
+      "speech_style_prompt": null
+    }
+  },
+  "audio_file_path": "generated_datasets/gemini_test_medication/cardiology_consultation_01_b6e406b1_conversation.wav",
+  "transcript_file_path": "generated_datasets/gemini_test_medication/cardiology_consultation_01_b6e406b1_transcript.json",
+  "created_at": "2025-09-11T12:49:33.187641",
+  "stt_evaluation_ready": true
+}

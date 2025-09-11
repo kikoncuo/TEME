@@ -10,7 +10,7 @@ from typing import List, Optional
 from dotenv import load_dotenv
 from dataset_generator import STTDatasetGenerator
 from openai_client import create_sample_scenarios
-from models import ConversationScenario, AudioConfiguration
+from models import ConversationScenario, AudioConfiguration, TTSProvider, GeminiAudioConfiguration
 
 
 @click.group()
@@ -61,8 +61,9 @@ def create_sample_config(ctx, output):
 @click.option('--batch-id', '-b', help='Custom batch ID')
 @click.option('--max-concurrent', '-c', default=3, help='Max concurrent generations')
 @click.option('--single', '-1', is_flag=True, help='Generate only the first scenario (for testing)')
+@click.option('--tts-provider', type=click.Choice(['elevenlabs', 'gemini']), default='elevenlabs', help='TTS provider to use')
 @click.pass_context
-def generate(ctx, scenarios, output_dir, batch_id, max_concurrent, single):
+def generate(ctx, scenarios, output_dir, batch_id, max_concurrent, single, tts_provider):
     """Generate dataset from scenarios configuration file."""
     generator = ctx.obj['generator']
     scenarios_path = Path(scenarios)
@@ -75,38 +76,53 @@ def generate(ctx, scenarios, output_dir, batch_id, max_concurrent, single):
         # Load scenarios
         scenarios_list = generator.load_scenarios_from_json(scenarios_path)
         click.echo(f"✓ Loaded {len(scenarios_list)} scenarios")
-        
+        click.echo(f"✓ Using TTS provider: {tts_provider}")
+
+        # Create audio configuration based on provider
+        if tts_provider == 'gemini':
+            audio_config = AudioConfiguration(
+                provider=TTSProvider.GEMINI,
+                gemini_config=GeminiAudioConfiguration()
+            )
+            if not generator.gemini_generator:
+                click.echo("✗ Gemini TTS generator not initialized. Please ensure GOOGLE_API_KEY is set.")
+                return
+        else:
+            audio_config = AudioConfiguration(provider=TTSProvider.ELEVENLABS)
+
         if single:
             # Generate single entry for testing
             click.echo("Generating single dataset entry for testing...")
             entry = generator.generate_single_dataset_entry(
-                scenarios_list[0], 
+                scenarios_list[0],
+                audio_config=audio_config,
                 output_subdir=batch_id or "test"
             )
             click.echo(f"✓ Test entry generated: {entry.entry_id}")
         else:
             # Generate full batch
             click.echo(f"Generating batch with {len(scenarios_list)} scenarios...")
-            
+
             # Set output directory
             generator.output_base_dir = Path(output_dir)
-            
+
             # Create batch
             batch = generator.create_batch_from_scenarios(
-                scenarios_list, 
+                scenarios_list,
+                audio_config=audio_config,
                 batch_id=batch_id
             )
-            
+
             # Run sync batch generation
             completed_batch = generator.generate_batch_sync(batch, max_concurrent=max_concurrent)
-            
+
             click.echo(f"✓ Batch completed: {completed_batch.batch_id}")
             click.echo(f"  - Successful: {len(completed_batch.completed_entries)}")
             click.echo(f"  - Failed: {len(completed_batch.failed_entries)}")
-            
+
             if completed_batch.failed_entries:
                 click.echo(f"  - Failed scenarios: {completed_batch.failed_entries}")
-    
+
     except Exception as e:
         click.echo(f"✗ Generation failed: {e}")
         import traceback
@@ -123,8 +139,9 @@ def generate(ctx, scenarios, output_dir, batch_id, max_concurrent, single):
 @click.option('--language', '-l', default='en', help='Language code')
 @click.option('--domain', help='Domain (medical, business, casual, etc.)')
 @click.option('--output-dir', '-o', default='./generated_datasets', help='Output directory')
+@click.option('--tts-provider', type=click.Choice(['elevenlabs', 'gemini']), default='elevenlabs', help='TTS provider to use')
 @click.pass_context
-def quick_generate(ctx, title, description, context, participants, duration, difficulty, language, domain, output_dir):
+def quick_generate(ctx, title, description, context, participants, duration, difficulty, language, domain, output_dir, tts_provider):
     """Quickly generate a single conversation from command-line parameters."""
     generator = ctx.obj['generator']
     
@@ -141,22 +158,36 @@ def quick_generate(ctx, title, description, context, participants, duration, dif
             language=language,
             domain=domain
         )
-        
+
         click.echo(f"Generating conversation: {title}")
-        
+        click.echo(f"Using TTS provider: {tts_provider}")
+
+        # Create audio configuration based on provider
+        if tts_provider == 'gemini':
+            audio_config = AudioConfiguration(
+                provider=TTSProvider.GEMINI,
+                gemini_config=GeminiAudioConfiguration()
+            )
+            if not generator.gemini_generator:
+                click.echo("✗ Gemini TTS generator not initialized. Please ensure GOOGLE_API_KEY is set.")
+                return
+        else:
+            audio_config = AudioConfiguration(provider=TTSProvider.ELEVENLABS)
+
         # Set output directory
         generator.output_base_dir = Path(output_dir)
-        
+
         # Generate single entry (voice mappings will be selected based on language)
         entry = generator.generate_single_dataset_entry(
             scenario,
+            audio_config=audio_config,
             output_subdir="quick_generation"
         )
-        
+
         click.echo(f"✓ Generated: {entry.entry_id}")
         click.echo(f"  - Audio: {entry.audio_file_path}")
         click.echo(f"  - Transcript: {entry.transcript_file_path}")
-        
+
     except Exception as e:
         click.echo(f"✗ Quick generation failed: {e}")
         import traceback

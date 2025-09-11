@@ -1,10 +1,17 @@
 """
 Pydantic models for STT evaluation dataset generation.
 """
-from typing import List, Optional, Dict, Any, Literal
+from typing import List, Optional, Dict, Any, Literal, Union
+from enum import Enum
 from pydantic import BaseModel, Field
 from pathlib import Path
 import datetime
+
+
+class TTSProvider(str, Enum):
+    """TTS provider options."""
+    ELEVENLABS = "elevenlabs"
+    GEMINI = "gemini"
 
 
 class ConversationTurn(BaseModel):
@@ -49,14 +56,14 @@ class GeneratedConversation(BaseModel):
 
 
 class VoiceMapping(BaseModel):
-    """Maps speakers to ElevenLabs voice IDs."""
+    """Maps speakers to voice IDs (ElevenLabs or Gemini voice names)."""
     speaker_name: str
-    voice_id: str
+    voice_id: str = Field(description="ElevenLabs voice ID or Gemini voice name")
     voice_name: Optional[str] = None
     voice_description: Optional[str] = None
 
 
-class AudioConfiguration(BaseModel):
+class ElevenLabsAudioConfiguration(BaseModel):
     """Configuration for audio generation with ElevenLabs v3."""
     model_id: str = Field("eleven_v3", description="ElevenLabs model ID")
     output_format: str = Field("mp3_44100_128", description="Audio output format")
@@ -65,6 +72,22 @@ class AudioConfiguration(BaseModel):
     apply_text_normalization: str = Field("auto", description="Text normalization: auto, on, off")
     use_audio_tags: bool = Field(True, description="Enable v3 audio tags for enhanced expression")
     language_code: Optional[str] = Field(None, description="Language code (ISO 639-1)")
+
+
+class GeminiAudioConfiguration(BaseModel):
+    """Configuration for audio generation with Gemini 2.5 TTS."""
+    model: str = Field("gemini-2.5-flash-preview-tts", description="Gemini model for TTS")
+    output_format: str = Field("wav", description="Audio output format (wav for Gemini)")
+    voice_name: Optional[str] = Field(None, description="Default voice name for single-speaker")
+    language_code: Optional[str] = Field(None, description="Language code (ISO 639-1)")
+    speech_style_prompt: Optional[str] = Field(None, description="Natural language prompt for controlling speech style, tone, accent, pace")
+
+
+class AudioConfiguration(BaseModel):
+    """Unified configuration for audio generation with multiple TTS providers."""
+    provider: TTSProvider = Field(TTSProvider.ELEVENLABS, description="TTS provider to use")
+    elevenlabs_config: Optional[ElevenLabsAudioConfiguration] = Field(default_factory=ElevenLabsAudioConfiguration, description="ElevenLabs-specific configuration")
+    gemini_config: Optional[GeminiAudioConfiguration] = Field(default_factory=GeminiAudioConfiguration, description="Gemini-specific configuration")
 
 
 class DatasetEntry(BaseModel):

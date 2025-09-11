@@ -1,0 +1,152 @@
+[
+  {
+    "speaker_name": "Doctor",
+    "voice_id": "Charon",
+    "voice_name": "Charon",
+    "voice_description": "Voz informativa con acento español peninsular, adecuada para médicos profesionales autoritarios"
+  },
+  {
+    "speaker_name": "Paciente",
+    "voice_id": "Achird",
+    "voice_name": "Achird",
+    "voice_description": "Voz irregular e inconsistente con acento español peninsular, adecuada para pacientes conversacionales que suelen pronunciar mal los nombres de medicamentos"
+  },
+  {
+    "speaker_name": "Cardiólogo",
+    "voice_id": "Rasalgethi",
+    "voice_name": "Rasalgethi",
+    "voice_description": "Voz informativa con acento español peninsular para cardiólogos"
+  },
+  {
+    "speaker_name": "Oncólogo",
+    "voice_id": "Kore",
+    "voice_name": "Kore",
+    "voice_description": "Voz firme con acento español peninsular para oncólogos"
+  },
+  {
+    "speaker_name": "Radio-oncólogo",
+    "voice_id": "Alnilam",
+    "voice_name": "Alnilam",
+    "voice_description": "Voz firme con acento español peninsular para radio-oncólogos"
+  },
+  {
+    "speaker_name": "Neurocirujano",
+    "voice_id": "Gacrux",
+    "voice_name": "Gacrux",
+    "voice_description": "Voz madura con acento español peninsular para neurocirujanos"
+  },
+  {
+    "speaker_name": "Neurólogo",
+    "voice_id": "Sadaltager",
+    "voice_name": "Sadaltager",
+    "voice_description": "Voz conocedora con acento español peninsular para neurólogos"
+  },
+  {
+    "speaker_name": "Residente",
+    "voice_id": "Zephyr",
+    "voice_name": "Zephyr",
+    "voice_description": "Voz brillante con acento español peninsular para residentes médicos jóvenes"
+  },
+  {
+    "speaker_name": "Enfermera",
+    "voice_id": "Pulcherrima",
+    "voice_name": "Pulcherrima",
+    "voice_description": "Voz directa con acento español peninsular para enfermeras profesionales"
+  },
+  {
+    "speaker_name": "Psiquiatra",
+    "voice_id": "Sulafat",
+    "voice_name": "Sulafat",
+    "voice_description": "Voz cálida con acento español peninsular para psiquiatras"
+  },
+  {
+    "speaker_name": "Nefrólogo",
+    "voice_id": "Orus",
+    "voice_name": "Orus",
+    "voice_description": "Voz firme con acento español peninsular para nefrólogos"
+  },
+  {
+    "speaker_name": "Infectólogo",
+    "voice_id": "Fenrir",
+    "voice_name": "Fenrir",
+    "voice_description": "Voz excitada con acento español peninsular para infectólogos"
+  },
+  {
+    "speaker_name": "Cirujano",
+    "voice_id": "Algenib",
+    "voice_name": "Algenib",
+    "voice_description": "Voz grave con acento español peninsular para cirujanos"
+  },
+  {
+    "speaker_name": "Anestesiólogo",
+    "voice_id": "Schedar",
+    "voice_name": "Schedar",
+    "voice_description": "Voz pareja con acento español peninsular para anestesiólogos"
+  },
+  {
+    "speaker_name": "Perfusionista",
+    "voice_id": "Iapetus",
+    "voice_name": "Iapetus",
+    "voice_description": "Voz clara con acento español peninsular para perfusionistas"
+  },
+  {
+    "speaker_name": "Endocrinólogo",
+    "voice_id": "Erinome",
+    "voice_name": "Erinome",
+    "voice_description": "Voz clara con acento español peninsular para endocrinólogos"
+  },
+  {
+    "speaker_name": "Gastroenterólogo",
+    "voice_id": "Algieba",
+    "voice_name": "Algieba",
+    "voice_description": "Voz suave con acento español peninsular para gastroenterólogos"
+  },
+  {
+    "speaker_name": "Endoscopista",
+    "voice_id": "Despina",
+    "voice_name": "Despina",
+    "voice_description": "Voz suave con acento español peninsular para endoscopistas"
+  },
+  {
+    "speaker_name": "Reumatólogo",
+    "voice_id": "Vindemiatrix",
+    "voice_name": "Vindemiatrix",
+    "voice_description": "Voz gentil con acento español peninsular para reumatólogos"
+  },
+  {
+    "speaker_name": "Neumólogo",
+    "voice_id": "Enceladus",
+    "voice_name": "Enceladus",
+    "voice_description": "Voz respiratoria con acento español peninsular para neumólogos"
+  },
+  {
+    "speaker_name": "Intensivista",
+    "voice_id": "Puck",
+    "voice_name": "Puck",
+    "voice_description": "Voz animada con acento español peninsular para intensivistas"
+  },
+  {
+    "speaker_name": "Dermatólogo",
+    "voice_id": "Zubenelgenubi",
+    "voice_name": "Zubenelgenubi",
+    "voice_description": "Voz casual con acento español peninsular para dermatólogos"
+  },
+  {
+    "speaker_name": "Padre",
+    "voice_id": "Achernar",
+    "voice_name": "Achernar",
+    "voice_description": "Voz suave con acento español peninsular para padres preocupados que suelen pronunciar mal los nombres de medicamentos"
+  },
+  {
+    "speaker_name": "Madre",
+    "voice_id": "Leda",
+    "voice_name": "Leda",
+    "voice_description": "Voz juvenil con acento español peninsular para madres angustiadas que suelen pronunciar mal los nombres de medicamentos"
+  },
+  {
+    "speaker_name": "Familiar",
+    "voice_id": "Sadachbia",
+    "voice_name": "Sadachbia",
+    "voice_description": "Voz vivaz con acento español peninsular para familiares preocupados que suelen pronunciar mal los nombres de medicamentos"
+  }
+]

@@ -11,9 +11,11 @@ from datetime import datetime
 
 from openai_client import OpenAIConversationGenerator
 from elevenlabs_client import ElevenLabsAudioGenerator
+from gemini_client import GeminiAudioGenerator
 from models import (
-    ConversationScenario, GeneratedConversation, DatasetEntry, 
-    GenerationBatch, VoiceMapping, AudioConfiguration
+    ConversationScenario, GeneratedConversation, DatasetEntry,
+    GenerationBatch, VoiceMapping, AudioConfiguration, TTSProvider,
+    ElevenLabsAudioConfiguration, GeminiAudioConfiguration
 )
 
 
@@ -24,10 +26,20 @@ class STTDatasetGenerator:
         self,
         openai_api_key: str = None,
         elevenlabs_api_key: str = None,
+        gemini_api_key: str = None,
         output_base_dir: Path = None
     ):
         self.openai_generator = OpenAIConversationGenerator(openai_api_key)
         self.elevenlabs_generator = ElevenLabsAudioGenerator(elevenlabs_api_key)
+
+        # Initialize Gemini generator if API key is provided
+        self.gemini_generator = None
+        if gemini_api_key or os.getenv("GOOGLE_API_KEY"):
+            try:
+                self.gemini_generator = GeminiAudioGenerator(gemini_api_key)
+                print("✓ Gemini TTS generator initialized")
+            except Exception as e:
+                print(f"⚠ Failed to initialize Gemini TTS generator: {e}")
 
         self.output_base_dir = output_base_dir or Path("./generated_datasets")
         self.output_base_dir.mkdir(parents=True, exist_ok=True)
@@ -36,28 +48,40 @@ class STTDatasetGenerator:
         self.default_audio_config = AudioConfiguration()
         self.english_voice_mappings = self._load_voice_mappings("en")
         self.spanish_voice_mappings = self._load_voice_mappings("es")
+        self.english_gemini_voice_mappings = self._load_voice_mappings("en", "gemini")
+        self.spanish_gemini_voice_mappings = self._load_voice_mappings("es", "gemini")
 
-    def _load_voice_mappings(self, language: str) -> List[VoiceMapping]:
-        """Load voice mappings from JSON file for the specified language."""
-        mappings_path = Path(__file__).parent / f"voice_mappings_{language}.json"
+    def _load_voice_mappings(self, language: str, provider: str = "elevenlabs") -> List[VoiceMapping]:
+        """Load voice mappings from JSON file for the specified language and provider."""
+        if provider == "gemini":
+            mappings_path = Path(__file__).parent / f"voice_mappings_gemini_{language}.json"
+        else:
+            mappings_path = Path(__file__).parent / f"voice_mappings_{language}.json"
+
         if mappings_path.exists():
             try:
                 with open(mappings_path, 'r', encoding='utf-8') as f:
                     mappings_data = json.load(f)
                 return [VoiceMapping(**mapping) for mapping in mappings_data]
             except Exception as e:
-                print(f"Warning: Could not load {language} voice mappings: {e}")
+                print(f"Warning: Could not load {language} {provider} voice mappings: {e}")
                 return []
         else:
-            print(f"Warning: Voice mappings file for {language} not found")
+            print(f"Warning: Voice mappings file for {language} ({provider}) not found")
             return []
 
-    def _get_voice_mappings_for_scenario(self, scenario: ConversationScenario) -> List[VoiceMapping]:
-        """Get appropriate voice mappings based on scenario language."""
-        if scenario.language and scenario.language.lower() in ['es', 'spanish', 'espanol']:
-            return self.spanish_voice_mappings if self.spanish_voice_mappings else []
+    def _get_voice_mappings_for_scenario(self, scenario: ConversationScenario, provider: TTSProvider = TTSProvider.ELEVENLABS) -> List[VoiceMapping]:
+        """Get appropriate voice mappings based on scenario language and provider."""
+        if provider == TTSProvider.GEMINI:
+            if scenario.language and scenario.language.lower() in ['es', 'spanish', 'espanol']:
+                return self.spanish_gemini_voice_mappings if self.spanish_gemini_voice_mappings else []
+            else:
+                return self.english_gemini_voice_mappings if self.english_gemini_voice_mappings else []
         else:
-            return self.english_voice_mappings if self.english_voice_mappings else []
+            if scenario.language and scenario.language.lower() in ['es', 'spanish', 'espanol']:
+                return self.spanish_voice_mappings if self.spanish_voice_mappings else []
+            else:
+                return self.english_voice_mappings if self.english_voice_mappings else []
 
     def generate_single_dataset_entry(
         self,
@@ -68,11 +92,12 @@ class STTDatasetGenerator:
     ) -> DatasetEntry:
         """Generate a single complete dataset entry."""
 
+        # Use default audio config if none provided
+        audio_config = audio_config or self.default_audio_config
+
         # Use language-specific voice mappings if none provided
         if voice_mappings is None:
-            voice_mappings = self._get_voice_mappings_for_scenario(scenario)
-
-        audio_config = audio_config or self.default_audio_config
+            voice_mappings = self._get_voice_mappings_for_scenario(scenario, audio_config.provider)
         
         # Create output directory
         if output_subdir:
@@ -95,22 +120,42 @@ class STTDatasetGenerator:
         # Step 2: Create dataset entry
         entry_id = f"{scenario.scenario_id}_{uuid.uuid4().hex[:8]}"
         
-        # Step 3: Generate audio using ElevenLabs
-        audio_filename = f"{entry_id}_conversation.mp3"
-        audio_path = output_dir / audio_filename
-        
-        try:
-            print(f"Generating audio for conversation...")
-            final_audio_path = self.elevenlabs_generator.generate_conversation_audio(
-                conversation=conversation,
-                voice_mappings=voice_mappings,
-                audio_config=audio_config,
-                output_path=audio_path
-            )
-            print(f"Audio generated: {final_audio_path}")
-        except Exception as e:
-            print(f"Failed to generate audio: {e}")
-            raise
+        # Step 3: Generate audio using the specified TTS provider
+        if audio_config.provider == TTSProvider.GEMINI:
+            if not self.gemini_generator:
+                raise ValueError("Gemini TTS generator not initialized. Please provide GOOGLE_API_KEY.")
+            audio_filename = f"{entry_id}_conversation.wav"  # Gemini outputs WAV by default
+            audio_path = output_dir / audio_filename
+
+            try:
+                print(f"Generating audio for conversation using Gemini TTS...")
+                final_audio_path = self.gemini_generator.generate_conversation_audio(
+                    conversation=conversation,
+                    voice_mappings=voice_mappings,
+                    config=audio_config.gemini_config,
+                    output_path=audio_path
+                )
+                print(f"Audio generated with Gemini: {final_audio_path}")
+            except Exception as e:
+                print(f"Failed to generate audio with Gemini: {e}")
+                raise
+        else:
+            # Use ElevenLabs as default/fallback
+            audio_filename = f"{entry_id}_conversation.mp3"
+            audio_path = output_dir / audio_filename
+
+            try:
+                print(f"Generating audio for conversation using ElevenLabs...")
+                final_audio_path = self.elevenlabs_generator.generate_conversation_audio(
+                    conversation=conversation,
+                    voice_mappings=voice_mappings,
+                    audio_config=audio_config.elevenlabs_config,
+                    output_path=audio_path
+                )
+                print(f"Audio generated with ElevenLabs: {final_audio_path}")
+            except Exception as e:
+                print(f"Failed to generate audio with ElevenLabs: {e}")
+                raise
         
         # Step 4: Save transcript
         transcript_filename = f"{entry_id}_transcript.json"
@@ -259,18 +304,28 @@ class STTDatasetGenerator:
 
         batch_id = batch_id or f"batch_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
 
+        # Use default audio config if none provided
+        audio_config = audio_config or self.default_audio_config
+
         # Use language-specific voice mappings if none provided and all scenarios have the same language
         if voice_mappings is None and scenarios:
             first_scenario = scenarios[0]
             # Check if all scenarios have the same language
             if all(s.language == first_scenario.language for s in scenarios):
-                voice_mappings = self._get_voice_mappings_for_scenario(first_scenario)
+                voice_mappings = self._get_voice_mappings_for_scenario(first_scenario, audio_config.provider)
             else:
                 # Mixed languages - try English as fallback
-                voice_mappings = self.english_voice_mappings
+                if audio_config.provider == TTSProvider.GEMINI:
+                    voice_mappings = self.english_gemini_voice_mappings
+                else:
+                    voice_mappings = self.english_voice_mappings
 
-        voice_mappings = voice_mappings or self.english_voice_mappings
-        audio_config = audio_config or self.default_audio_config
+        # Fallback to default voice mappings based on provider
+        if voice_mappings is None:
+            if audio_config.provider == TTSProvider.GEMINI:
+                voice_mappings = self.english_gemini_voice_mappings
+            else:
+                voice_mappings = self.english_voice_mappings
 
         return GenerationBatch(
             batch_id=batch_id,
