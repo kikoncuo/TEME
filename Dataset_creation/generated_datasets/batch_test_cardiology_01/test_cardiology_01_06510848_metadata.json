@@ -1,0 +1,308 @@
+{
+  "entry_id": "test_cardiology_01_06510848",
+  "conversation": {
+    "scenario_id": "test_cardiology_01",
+    "title": "Test Cardiología",
+    "context": "Consulta en el consultorio de cardiología entre un cardiólogo y un paciente preocupado por síntomas recientes.",
+    "turns": [
+      {
+        "speaker": "Cardiólogo",
+        "text": "Buenos días, señor García. Cuénteme, ¿qué síntomas lo han traído hoy a la consulta? ¿Ha notado dolor torácico, disnea o palpitaciones últimamente?",
+        "duration_estimate": 7.0,
+        "voice_characteristics": "profesional questioning"
+      },
+      {
+        "speaker": "Paciente",
+        "text": "Eh, sí, doctor, la verdad es que hace unos días sentí un dolor opresivo en el pecho, sobre todo cuando subía las escaleras. Además, he estado algo mareado y me faltaba el aire, lo cual nunca me había pasado antes.",
+        "duration_estimate": 8.0,
+        "voice_characteristics": "anxious conversational"
+      },
+      {
+        "speaker": "Cardiólogo",
+        "text": "Entiendo. ¿Ha presentado también sudoración fría, náuseas o irradiación del dolor hacia el brazo izquierdo o la mandíbula? Es importante para descartar un síndrome coronario agudo.",
+        "duration_estimate": 7.0,
+        "voice_characteristics": "emphatic professional"
+      },
+      {
+        "speaker": "Paciente",
+        "text": "Pues, sudoración sí, pero no he sentido dolor en el brazo ni en la mandíbula. Me preocupa porque mi padre tuvo un infarto a los 54 años y, bueno, no sé si esto sea hereditario.",
+        "duration_estimate": 6.0,
+        "voice_characteristics": "frustrated soft-spoken"
+      },
+      {
+        "speaker": "Cardiólogo",
+        "text": "Es comprensible su preocupación, sobre todo con antecedentes familiares. Vamos a hacer un electrocardiograma y solicitar una biometría hemática y un perfil lipídico para evaluar riesgo cardiovascular. ¿De acuerdo?",
+        "duration_estimate": 7.0,
+        "voice_characteristics": "reassuring warm"
+      }
+    ],
+    "metadata": {
+      "word_count": 152,
+      "turn_count": 5,
+      "avg_turn_length": 30.4
+    },
+    "estimated_total_duration": 60.800000000000004,
+    "generated_at": "2024-06-13T18:25:00Z"
+  },
+  "voice_mappings": [
+    {
+      "speaker_name": "Doctor",
+      "voice_id": "tXgbXPnsMpKXkuTgvE3h",
+      "voice_name": "Elena",
+      "voice_description": "Voz femenina profesional, adecuada para médicos"
+    },
+    {
+      "speaker_name": "Paciente",
+      "voice_id": "AZnzlk1XvdvUeBnXmlld",
+      "voice_name": "Domi",
+      "voice_description": "Voz masculina conversacional, adecuada para pacientes"
+    },
+    {
+      "speaker_name": "Manager",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina autoritaria, adecuada para gerentes"
+    },
+    {
+      "speaker_name": "Desarrollador",
+      "voice_id": "VR6AewLTigWG4xSOukaG",
+      "voice_name": "Josh",
+      "voice_description": "Voz masculina joven, adecuada para desarrolladores"
+    },
+    {
+      "speaker_name": "Diseñador",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina creativa, adecuada para diseñadores"
+    },
+    {
+      "speaker_name": "Agente",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina profesional para agentes de soporte"
+    },
+    {
+      "speaker_name": "Cliente",
+      "voice_id": "AZnzlk1XvdvUeBnXmlld",
+      "voice_name": "Domi",
+      "voice_description": "Voz masculina natural para clientes"
+    },
+    {
+      "speaker_name": "Recepcionista",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina amigable para recepcionistas"
+    },
+    {
+      "speaker_name": "Entrevistador",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina profesional para entrevistadores"
+    },
+    {
+      "speaker_name": "Candidato",
+      "voice_id": "VR6AewLTigWG4xSOukaG",
+      "voice_name": "Josh",
+      "voice_description": "Voz masculina joven para candidatos"
+    },
+    {
+      "speaker_name": "Alex",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina amigable para conversaciones casuales"
+    },
+    {
+      "speaker_name": "Sam",
+      "voice_id": "AZnzlk1XvdvUeBnXmlld",
+      "voice_name": "Domi",
+      "voice_description": "Voz masculina amigable para conversaciones casuales"
+    },
+    {
+      "speaker_name": "Asesor",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina profesional para asesores financieros"
+    },
+    {
+      "speaker_name": "Farmacéutico",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina conocedora para farmacéuticos"
+    },
+    {
+      "speaker_name": "Taxista",
+      "voice_id": "AZnzlk1XvdvUeBnXmlld",
+      "voice_name": "Domi",
+      "voice_description": "Voz masculina casual para taxistas"
+    },
+    {
+      "speaker_name": "Pasajero",
+      "voice_id": "VR6AewLTigWG4xSOukaG",
+      "voice_name": "Josh",
+      "voice_description": "Voz masculina natural para pasajeros"
+    },
+    {
+      "speaker_name": "Profesor",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina educativa para profesores"
+    },
+    {
+      "speaker_name": "Estudiante",
+      "voice_id": "VR6AewLTigWG4xSOukaG",
+      "voice_name": "Josh",
+      "voice_description": "Voz masculina joven para estudiantes"
+    },
+    {
+      "speaker_name": "Cardiólogo",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina profesional para cardiólogos"
+    },
+    {
+      "speaker_name": "Oncólogo",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina autoritaria para oncólogos"
+    },
+    {
+      "speaker_name": "Radio-oncólogo",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina autoritaria para radio-oncólogos"
+    },
+    {
+      "speaker_name": "Neurocirujano",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina precisa para neurocirujanos"
+    },
+    {
+      "speaker_name": "Neurólogo",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina calmada para neurólogos"
+    },
+    {
+      "speaker_name": "Residente",
+      "voice_id": "VR6AewLTigWG4xSOukaG",
+      "voice_name": "Josh",
+      "voice_description": "Voz masculina joven para residentes médicos"
+    },
+    {
+      "speaker_name": "Enfermera",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina clara y profesional para enfermeras"
+    },
+    {
+      "speaker_name": "Psiquiatra",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina empática para psiquiatras"
+    },
+    {
+      "speaker_name": "Nefrólogo",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina técnica para nefrólogos"
+    },
+    {
+      "speaker_name": "Infectólogo",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina detallada para infectólogos"
+    },
+    {
+      "speaker_name": "Cirujano",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina autoritaria para cirujanos"
+    },
+    {
+      "speaker_name": "Anestesiólogo",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina calmada para anestesiólogos"
+    },
+    {
+      "speaker_name": "Perfusionista",
+      "voice_id": "VR6AewLTigWG4xSOukaG",
+      "voice_name": "Josh",
+      "voice_description": "Voz masculina técnica para perfusionistas"
+    },
+    {
+      "speaker_name": "Endocrinólogo",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina explicativa para endocrinólogos"
+    },
+    {
+      "speaker_name": "Gastroenterólogo",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina detallada para gastroenterólogos"
+    },
+    {
+      "speaker_name": "Endoscopista",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina técnica para endoscopistas"
+    },
+    {
+      "speaker_name": "Reumatólogo",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina empática para reumatólogos"
+    },
+    {
+      "speaker_name": "Neumólogo",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina respiratoria para neumólogos"
+    },
+    {
+      "speaker_name": "Intensivista",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina urgente para intensivistas"
+    },
+    {
+      "speaker_name": "Dermatólogo",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina clara para dermatólogos"
+    },
+    {
+      "speaker_name": "Padre",
+      "voice_id": "AZnzlk1XvdvUeBnXmlld",
+      "voice_name": "Domi",
+      "voice_description": "Voz masculina preocupada para padres"
+    },
+    {
+      "speaker_name": "Madre",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina angustiada para madres"
+    },
+    {
+      "speaker_name": "Familiar",
+      "voice_id": "AZnzlk1XvdvUeBnXmlld",
+      "voice_name": "Domi",
+      "voice_description": "Voz masculina familiar preocupada"
+    }
+  ],
+  "audio_config": {
+    "model_id": "eleven_v3",
+    "output_format": "mp3_44100_128",
+    "stability": 0.5,
+    "use_speaker_boost": true,
+    "apply_text_normalization": "auto",
+    "use_audio_tags": true,
+    "language_code": null
+  },
+  "audio_file_path": "generated_datasets/batch_test_cardiology_01/test_cardiology_01_06510848_conversation.mp3",
+  "transcript_file_path": "generated_datasets/batch_test_cardiology_01/test_cardiology_01_06510848_transcript.json",
+  "created_at": "2025-09-07T17:44:12.465710",
+  "stt_evaluation_ready": true
+}

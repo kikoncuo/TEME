@@ -1,0 +1,167 @@
+[
+  {
+    "scenario_id": "cardiology_consultation_01",
+    "title": "Consulta Cardiología - Arritmias Complejas",
+    "description": "Cardiólogo explica arritmias ventriculares complejas y discute anticoagulantes",
+    "context": "Consulta especializada de cardiología donde el cardiólogo explica al paciente las arritmias ventriculares detectadas en su Holter, discute opciones de ablación por catéter, y prescribe warfarina con monitorización de INR. El paciente interrumpe constantemente con preguntas sobre los efectos secundarios de la amiodarona y digoxina.",
+    "participants": ["Cardiólogo", "Paciente"],
+    "target_duration": 180,
+    "difficulty_level": "hard",
+    "language": "es",
+    "domain": "cardiology"
+  },
+  {
+    "scenario_id": "oncology_rounds_01",
+    "title": "Visita Oncológica - Carcinoma Pulmonar Avanzado",
+    "description": "Equipo oncológico discute protocolo de quimioterapia multimodal",
+    "context": "Sala de oncología donde oncólogo médico, radio-oncólogo y enfermera oncóloga discuten el caso de carcinoma pulmonar no microcítico estadio IIIB. Debaten sobre pembrolizumab más quimioterapia neoadyuvante, radioterapia conformacional 3D, y posibles toxicidades del docetaxel y ciclofosfamida. El paciente y su familia escuchan atentamente mientras suena el monitor de signos vitales.",
+    "participants": ["Oncólogo", "Radio-oncólogo", "Enfermera", "Paciente", "Familiar"],
+    "target_duration": 240,
+    "difficulty_level": "hard",
+    "language": "es",
+    "domain": "oncology"
+  },
+  {
+    "scenario_id": "neurosurgery_consultation_01",
+    "title": "Consulta Neurocirugía - Glioblastoma Multiforme",
+    "description": "Neurocirujano explica cirugía de glioblastoma con awake craniotomía",
+    "context": "Consulta de neurocirugía donde el neurocirujano explica al paciente con glioblastoma multiforme grado IV las opciones de resección tumoral con mapeo cortical awake, discutiendo riesgos de afasia, hemiparesia, y la necesidad de dexametasona para controlar el edema cerebral. El paciente interrumpe con preguntas sobre temozolomida y radioterapia hipofraccionada.",
+    "participants": ["Neurocirujano", "Paciente"],
+    "target_duration": 200,
+    "difficulty_level": "hard",
+    "language": "es",
+    "domain": "neurosurgery"
+  },
+  {
+    "scenario_id": "emergency_room_01",
+    "title": "Urgencias - Síndrome Coronario Agudo",
+    "description": "Equipo de emergencias maneja infarto agudo de miocardio",
+    "context": "Sala de emergencias con ruido de monitores cardíacos y ventiladores. Cardiólogo de guardia, residente de emergencias y enfermera discuten el manejo de infarto agudo de miocardio con elevación del ST. Debaten sobre angioplastia primaria vs trombolisis con alteplasa, anticoagulación con enoxaparina, y el paciente grita de dolor mientras se prepara para el cateterismo cardíaco urgente.",
+    "participants": ["Cardiólogo", "Residente", "Enfermera", "Paciente"],
+    "target_duration": 220,
+    "difficulty_level": "hard",
+    "language": "es",
+    "domain": "emergency_medicine"
+  },
+  {
+    "scenario_id": "pediatric_intensive_care_01",
+    "title": "UCI Pediátrica - Síndrome de Guillain-Barré",
+    "description": "Neurólogo pediátrico discute plasmaféresis e inmunoglobulinas",
+    "context": "Unidad de cuidados intensivos pediátricos donde neurólogo infantil explica a los padres del niño con síndrome de Guillain-Barré el protocolo de inmunoglobulina intravenosa vs plasmaféresis terapéutica. Discuten ventilación mecánica invasiva, monitorización de la función neuromuscular, y posibles complicaciones como trombosis venosa profunda con enoxaparina profiláctica. Los monitores suenan constantemente con alarmas.",
+    "participants": ["Neurólogo", "Padre", "Madre", "Enfermera"],
+    "target_duration": 190,
+    "difficulty_level": "hard",
+    "language": "es",
+    "domain": "pediatric_neurology"
+  },
+  {
+    "scenario_id": "psychiatry_consultation_01",
+    "title": "Consulta Psiquiatría - Trastorno Bipolar con Psicosis",
+    "description": "Psiquiatra discute antipsicóticos atípicos y estabilizadores del ánimo",
+    "context": "Consulta psiquiátrica donde el psiquiatra explica al paciente con trastorno bipolar tipo I con características psicóticas el tratamiento con olanzapina depot más lamotrigina. Discuten interacciones con sertralina, efectos secundarios de la hiperprolactinemia inducida por risperidona, y la necesidad de monitorización de niveles séricos de valproato. El paciente interrumpe constantemente cuestionando la necesidad de litio.",
+    "participants": ["Psiquiatra", "Paciente"],
+    "target_duration": 170,
+    "difficulty_level": "hard",
+    "language": "es",
+    "domain": "psychiatry"
+  },
+  {
+    "scenario_id": "nephrology_dialysis_01",
+    "title": "Consulta Nefrología - Diálisis Peritoneal Ambulatoria Continua",
+    "description": "Nefrólogo explica complicaciones de la diálisis peritoneal",
+    "context": "Sala de nefrología donde el nefrólogo explica al paciente con insuficiencia renal crónica terminal las complicaciones de peritonitis bacteriana en diálisis peritoneal ambulatoria continua. Discuten vancomicina intraperitoneal, icodextrina para ultrafiltración, y la transición a hemodiálisis con catéter de doble luz subclavio. El paciente hace preguntas sobre fosfato de aluminio y calcitriol para el hiperparatiroidismo secundario.",
+    "participants": ["Nefrólogo", "Paciente", "Enfermera"],
+    "target_duration": 210,
+    "difficulty_level": "hard",
+    "language": "es",
+    "domain": "nephrology"
+  },
+  {
+    "scenario_id": "infectious_diseases_01",
+    "title": "Enfermedades Infecciosas - VIH con Coinfección VHC",
+    "description": "Infectólogo discute terapia antirretroviral altamente activa",
+    "context": "Consulta de enfermedades infecciosas donde el infectólogo explica al paciente con VIH y coinfección por virus de hepatitis C el tratamiento con dolutegravir, abacavir y lamivudina más sofosbuvir/velpatasvir. Discuten resistencia a tenofovir, toxicidad mitocondrial del estavudina, y monitorización de carga viral con PCR ultrasensible. El paciente interrumpe con preguntas sobre interferón pegilado y ribavirina.",
+    "participants": ["Infectólogo", "Paciente"],
+    "target_duration": 160,
+    "difficulty_level": "hard",
+    "language": "es",
+    "domain": "infectious_diseases"
+  },
+  {
+    "scenario_id": "surgical_team_briefing_01",
+    "title": "Briefing Quirúrgico - Cirugía Cardiaca Abierta",
+    "description": "Equipo quirúrgico discute cirugía de revascularización miocárdica",
+    "context": "Sala de briefing prequirúrgico donde cirujano cardiovascular, anestesiólogo, perfusionista y enfermera instrumentista discuten la cirugía de revascularización miocárdica con bypass cardiopulmonar. Debaten sobre heparina para anticoagulación, protamina para reversión, circulación extracorpórea con oxigenador de membrana, y posibles complicaciones como accidente cerebrovascular isquémico. El equipo discute el uso de aspirina y clopidogrel postoperatorios.",
+    "participants": ["Cirujano", "Anestesiólogo", "Perfusionista", "Enfermera"],
+    "target_duration": 250,
+    "difficulty_level": "hard",
+    "language": "es",
+    "domain": "cardiovascular_surgery"
+  },
+  {
+    "scenario_id": "endocrinology_consultation_01",
+    "title": "Consulta Endocrinología - Diabetes Mellitus Tipo 1 Descompensada",
+    "description": "Endocrinólogo discute insulina glargina y análogos de insulina rápida",
+    "context": "Consulta de endocrinología donde el endocrinólogo explica al paciente con diabetes mellitus tipo 1 descompensada el tratamiento con insulina glargina NPH más insulina aspart ultrarrápida. Discuten hipoglucemias nocturnas con glimepirida, cetoacidosis diabética con insulina regular intravenosa, y monitorización continua de glucosa con sensor Dexcom. El paciente pregunta sobre metformina y empagliflozina como terapia combinada.",
+    "participants": ["Endocrinólogo", "Paciente", "Familiar"],
+    "target_duration": 200,
+    "difficulty_level": "hard",
+    "language": "es",
+    "domain": "endocrinology"
+  },
+  {
+    "scenario_id": "gastroenterology_procedure_01",
+    "title": "Procedimiento Gastroenterología - Colonoscopia con Polipectomía",
+    "description": "Gastroenterólogo explica sedación consciente con midazolam y fentanilo",
+    "context": "Sala de endoscopias donde gastroenterólogo explica al paciente la colonoscopia diagnóstica con polipectomía endoscópica. Discuten sedación consciente con midazolam intravenoso más fentanilo, preparación intestinal con polietilenglicol, y posibles complicaciones como perforación colónica o hemorragia post-polipectomía. El paciente interrumpe con preguntas sobre propofol y ketamina como alternativas de sedación.",
+    "participants": ["Gastroenterólogo", "Endoscopista", "Paciente", "Enfermera"],
+    "target_duration": 180,
+    "difficulty_level": "hard",
+    "language": "es",
+    "domain": "gastroenterology"
+  },
+  {
+    "scenario_id": "rheumatology_consultation_01",
+    "title": "Consulta Reumatología - Artritis Reumatoide Seropositiva",
+    "description": "Reumatólogo discute terapia biológica con adalimumab",
+    "context": "Consulta de reumatología donde el reumatólogo explica al paciente con artritis reumatoide seropositiva el tratamiento con metotrexato oral más adalimumab subcutáneo. Discuten toxicidad hepática del leflunomida, infecciones oportunistas con abatacept, y monitorización de anticuerpos antinucleares con ELISA. El paciente cuestiona los efectos secundarios del rituximab y tocilizumab.",
+    "participants": ["Reumatólogo", "Paciente"],
+    "target_duration": 150,
+    "difficulty_level": "hard",
+    "language": "es",
+    "domain": "rheumatology"
+  },
+  {
+    "scenario_id": "pulmonology_icu_01",
+    "title": "UCI Neumología - SDRA por Neumonía Nosocomial",
+    "description": "Neumólogo discute ventilación mecánica protectora y antibióticos",
+    "context": "Unidad de cuidados intensivos donde neumólogo, intensivista y residente discuten el manejo de síndrome de dificultad respiratoria aguda por neumonía nosocomial multirresistente. Debaten sobre ventilación mecánica protectora con presión positiva al final de la espiración, piperacilina-tazobactam más vancomicina intravenosa, y pronación para mejorar la oxigenación. Los ventiladores mecánicos hacen ruido constante.",
+    "participants": ["Neumólogo", "Intensivista", "Residente", "Enfermera"],
+    "target_duration": 230,
+    "difficulty_level": "hard",
+    "language": "es",
+    "domain": "pulmonology"
+  },
+  {
+    "scenario_id": "dermatology_consultation_01",
+    "title": "Consulta Dermatología - Psoriasis Vulgar en Placas",
+    "description": "Dermatólogo discute fototerapia UVB y metotrexato sistémico",
+    "context": "Consulta de dermatología donde el dermatólogo explica al paciente con psoriasis vulgar en placas el tratamiento con metotrexato oral más fototerapia UVB de banda estrecha. Discuten toxicidad hepática del acitretina, interacciones de la ciclosporina con amlodipino, y monitorización de niveles de creatinina con ácido fólico profiláctico. El paciente pregunta sobre ustekinumab y secukinumab como alternativas biológicas.",
+    "participants": ["Dermatólogo", "Paciente"],
+    "target_duration": 140,
+    "difficulty_level": "hard",
+    "language": "es",
+    "domain": "dermatology"
+  },
+  {
+    "scenario_id": "ophthalmology_surgery_01",
+    "title": "Cirugía Oftalmológica - Catarata con Facoemulsificación",
+    "description": "Oftalmólogo explica anestesia tópica con proparacaína",
+    "context": "Sala de cirugía oftalmológica donde oftalmólogo explica al paciente la facoemulsificación de catarata con implante de lente intraocular. Discuten anestesia tópica con proparacaína más lidocaína intracamerular, viscoelásticos como hialuronato de sodio, y posibles complicaciones como edema corneal o endoftalmitis postoperatoria. El paciente interrumpe con preguntas sobre tropicamida y prednisolona oftálmica.",
+    "participants": ["Oftalmólogo", "Paciente", "Enfermera"],
+    "target_duration": 160,
+    "difficulty_level": "hard",
+    "language": "es",
+    "domain": "ophthalmology"
+  }
+]

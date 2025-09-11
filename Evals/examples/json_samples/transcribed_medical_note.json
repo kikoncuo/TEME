@@ -1,0 +1,12 @@
+{
+  "id": "transcription_001",
+  "source": "audio_recording",
+  "duration": "2:35",
+  "confidence": 0.89,
+  "text": "El paciente presenta dolor articular severo en rodilla derecha. Se prescribe Cerebyx 200 mg una vez al día durante 7 días. Presenta alergias conocidas a medicamentos. Seguimiento en una semana.",
+  "metadata": {
+    "transcriber": "AI_System_v2",
+    "model": "whisper-large-v3",
+    "processing_time": "00:15"
+  }
+}

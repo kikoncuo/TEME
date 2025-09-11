@@ -1,0 +1,12 @@
+{
+  "id": "consulta_001",
+  "patient_id": "PAC001",
+  "date": "2024-01-15",
+  "type": "medical_note",
+  "text": "El paciente presenta dolor articular severo en rodilla derecha. Se prescribe Celebrex 200 mg una vez al día durante 7 días. No presenta alergias conocidas a medicamentos. Seguimiento en una semana.",
+  "metadata": {
+    "doctor": "Dr. García",
+    "specialty": "Reumatología",
+    "priority": "medium"
+  }
+}

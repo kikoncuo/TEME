@@ -1,0 +1,380 @@
+{
+  "entry_id": "cardiology_consultation_01_4547e4b2",
+  "conversation": {
+    "scenario_id": "cardiology_consultation_01",
+    "title": "Consulta Cardiología - Arritmias Complejas",
+    "context": "Consulta especializada de cardiología donde el cardiólogo explica al paciente las arritmias ventriculares detectadas en su Holter, discute opciones de ablación por catéter, y prescribe warfarina con monitorización de INR. El paciente interrumpe constantemente con preguntas sobre los efectos secundarios de la amiodarona y digoxina.",
+    "turns": [
+      {
+        "speaker": "Cardiólogo",
+        "text": "Buenos días, señor Martínez. He revisado los resultados de su Holter y detectamos episodios de arritmias ventriculares complejas. Esto significa que su corazón ha presentado latidos desorganizados provenientes de los ventrículos, lo que puede aumentar el riesgo de eventos serios como taquicardia ventricular sostenida o incluso fibrilación ventricular. ¿Ha notado palpitaciones, mareos o síncopes últimamente?",
+        "duration_estimate": 22.0,
+        "voice_characteristics": "profesional"
+      },
+      {
+        "speaker": "Paciente",
+        "text": "Eh, sí, doctor, he sentido como unos brincos fuertes en el pecho y, uh, a veces como un mareo muy raro. ¿Eso es peligroso? ¿Me puede dar un infarto de eso?",
+        "duration_estimate": 12.0,
+        "voice_characteristics": "anxious"
+      },
+      {
+        "speaker": "Cardiólogo",
+        "text": "Comprendo su preocupación. No todos los episodios llevan a un infarto, pero sí es fundamental tratarlos para evitar complicaciones. Vamos a considerar dos estrategias: un manejo farmacológico y la posibilidad de una ablación por catéter. Quiero explicarle ambas para que tomemos la mejor decisión juntos.",
+        "duration_estimate": 15.0,
+        "voice_characteristics": "reassuring"
+      },
+      {
+        "speaker": "Paciente",
+        "text": "¿Ablación por catéter? ¿Eso es una operación o cómo? ¿Y los medicamentos, son muy fuertes? Escuché que la amiodarona puede afectar los pulmones o la tiroides, ¿eso es cierto?",
+        "duration_estimate": 13.0,
+        "voice_characteristics": "curious"
+      },
+      {
+        "speaker": "Cardiólogo",
+        "text": "La ablación por catéter no es una cirugía tradicional, sino un procedimiento mínimamente invasivo. Introducimos un catéter por la vena femoral hasta el corazón para localizar y destruir el foco de la arritmia con radiofrecuencia. Sobre la amiodarona, sí, puede tener efectos adversos como toxicidad pulmonar, disfunción tiroidea y alteraciones hepáticas. Por eso se reserva para casos seleccionados y bajo estricta vigilancia.",
+        "duration_estimate": 20.0,
+        "voice_characteristics": "authoritative"
+      },
+      {
+        "speaker": "Paciente",
+        "text": "Uy, doctor, entonces… ¿y la digoxina? Mi vecino la toma y dice que se siente como mareado a veces. ¿Eso también me puede pasar? Y, eh, ¿hay riesgo de intoxicación?",
+        "duration_estimate": 11.0,
+        "voice_characteristics": "questioning"
+      },
+      {
+        "speaker": "Cardiólogo",
+        "text": "La digoxina se usa más en casos de insuficiencia cardíaca o fibrilación auricular, no tanto en arritmias ventriculares. Sus efectos secundarios incluyen náuseas, visión borrosa y, sí, riesgo de intoxicación digital si no se controla la dosis. Por eso, si la indicamos, monitorizamos los niveles plasmáticos y la función renal.",
+        "duration_estimate": 16.0,
+        "voice_characteristics": "professional"
+      },
+      {
+        "speaker": "Paciente",
+        "text": "Ah, ya. Pero, entonces, si me da warfarina… ¿eso es para evitar que se formen coágulos? ¿Y tengo que estarme haciendo análisis a cada rato? Porque me dijeron algo del INR, pero no sé bien qué es.",
+        "duration_estimate": 13.0,
+        "voice_characteristics": "curious"
+      },
+      {
+        "speaker": "Cardiólogo",
+        "text": "Correcto, la warfarina es un anticoagulante que previene la formación de trombos, especialmente si hay riesgo de tromboembolismo secundario a la arritmia. El INR, o índice internacional normalizado, nos ayuda a ajustar la dosis para mantener una anticoagulación segura. Al inicio, requerirá controles frecuentes, después se espacian según la estabilidad.",
+        "duration_estimate": 17.0,
+        "voice_characteristics": "emphatic"
+      },
+      {
+        "speaker": "Paciente",
+        "text": "O sea, ¿y si el INR sube mucho, qué pasa? ¿Me puedo desangrar por algo mínimo? La verdad sí me da miedo eso de los sangrados.",
+        "duration_estimate": 10.0,
+        "voice_characteristics": "anxious"
+      },
+      {
+        "speaker": "Cardiólogo",
+        "text": "Entiendo el temor. Si el INR está muy alto, hay mayor riesgo de sangrados, pero por eso la monitorización es tan importante. Le enseñaré a reconocer signos de alarma como moretones espontáneos, sangrado de encías o sangre en la orina. Cualquier síntoma, nos avisa de inmediato.",
+        "duration_estimate": 15.0,
+        "voice_characteristics": "reassuring"
+      },
+      {
+        "speaker": "Paciente",
+        "text": "Y, eh, ¿tendré que dejar de comer algo? Me dijeron que la warfarina y la vitamina K no se llevan bien, ¿es cierto que no puedo comer espinaca ni brócoli?",
+        "duration_estimate": 9.0,
+        "voice_characteristics": "questioning"
+      },
+      {
+        "speaker": "Cardiólogo",
+        "text": "Debe mantener una ingesta constante de vitamina K. No es necesario eliminar verduras de hoja verde, pero sí evitar variaciones bruscas en su consumo. Le entregaré una lista de alimentos y una guía para que pueda llevar una dieta equilibrada y segura durante el tratamiento.",
+        "duration_estimate": 13.0,
+        "voice_characteristics": "warm"
+      },
+      {
+        "speaker": "Paciente",
+        "text": "Ah, perfecto. Última pregunta, lo prometo: ¿cuánto dura el tratamiento con warfarina? ¿Esto es para siempre o hay posibilidad de suspenderla si me hacen la ablación?",
+        "duration_estimate": 10.0,
+        "voice_characteristics": "questioning"
+      },
+      {
+        "speaker": "Cardiólogo",
+        "text": "En algunos casos, tras una ablación exitosa y si las arritmias desaparecen, es posible suspender la warfarina, pero eso depende de varios factores, como su riesgo tromboembólico según la escala CHA2DS2-VASc. Lo iremos evaluando con controles y estudios de seguimiento.",
+        "duration_estimate": 14.0,
+        "voice_characteristics": "professional"
+      },
+      {
+        "speaker": "Paciente",
+        "text": "Muchas gracias, doctor. Me deja más tranquilo saber que lo estarán monitoreando todo y que no estoy solo en esto.",
+        "duration_estimate": 8.0,
+        "voice_characteristics": "relieved"
+      },
+      {
+        "speaker": "Cardiólogo",
+        "text": "Con gusto, señor Martínez. Recuerde que cualquier duda o síntoma, estoy disponible. Agendaremos el primer control de INR y le entrego las indicaciones para su tratamiento.",
+        "duration_estimate": 11.0,
+        "voice_characteristics": "reassuring"
+      }
+    ],
+    "metadata": {
+      "word_count": 648,
+      "turn_count": 17,
+      "avg_turn_length": 38.11764705882353
+    },
+    "estimated_total_duration": 259.20000000000005,
+    "generated_at": "2024-06-13T09:45:00Z"
+  },
+  "voice_mappings": [
+    {
+      "speaker_name": "Doctor",
+      "voice_id": "tXgbXPnsMpKXkuTgvE3h",
+      "voice_name": "Elena",
+      "voice_description": "Voz femenina profesional, adecuada para médicos"
+    },
+    {
+      "speaker_name": "Paciente",
+      "voice_id": "AZnzlk1XvdvUeBnXmlld",
+      "voice_name": "Domi",
+      "voice_description": "Voz masculina conversacional, adecuada para pacientes"
+    },
+    {
+      "speaker_name": "Manager",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina autoritaria, adecuada para gerentes"
+    },
+    {
+      "speaker_name": "Desarrollador",
+      "voice_id": "VR6AewLTigWG4xSOukaG",
+      "voice_name": "Josh",
+      "voice_description": "Voz masculina joven, adecuada para desarrolladores"
+    },
+    {
+      "speaker_name": "Diseñador",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina creativa, adecuada para diseñadores"
+    },
+    {
+      "speaker_name": "Agente",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina profesional para agentes de soporte"
+    },
+    {
+      "speaker_name": "Cliente",
+      "voice_id": "AZnzlk1XvdvUeBnXmlld",
+      "voice_name": "Domi",
+      "voice_description": "Voz masculina natural para clientes"
+    },
+    {
+      "speaker_name": "Recepcionista",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina amigable para recepcionistas"
+    },
+    {
+      "speaker_name": "Entrevistador",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina profesional para entrevistadores"
+    },
+    {
+      "speaker_name": "Candidato",
+      "voice_id": "VR6AewLTigWG4xSOukaG",
+      "voice_name": "Josh",
+      "voice_description": "Voz masculina joven para candidatos"
+    },
+    {
+      "speaker_name": "Alex",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina amigable para conversaciones casuales"
+    },
+    {
+      "speaker_name": "Sam",
+      "voice_id": "AZnzlk1XvdvUeBnXmlld",
+      "voice_name": "Domi",
+      "voice_description": "Voz masculina amigable para conversaciones casuales"
+    },
+    {
+      "speaker_name": "Asesor",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina profesional para asesores financieros"
+    },
+    {
+      "speaker_name": "Farmacéutico",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina conocedora para farmacéuticos"
+    },
+    {
+      "speaker_name": "Taxista",
+      "voice_id": "AZnzlk1XvdvUeBnXmlld",
+      "voice_name": "Domi",
+      "voice_description": "Voz masculina casual para taxistas"
+    },
+    {
+      "speaker_name": "Pasajero",
+      "voice_id": "VR6AewLTigWG4xSOukaG",
+      "voice_name": "Josh",
+      "voice_description": "Voz masculina natural para pasajeros"
+    },
+    {
+      "speaker_name": "Profesor",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina educativa para profesores"
+    },
+    {
+      "speaker_name": "Estudiante",
+      "voice_id": "VR6AewLTigWG4xSOukaG",
+      "voice_name": "Josh",
+      "voice_description": "Voz masculina joven para estudiantes"
+    },
+    {
+      "speaker_name": "Cardiólogo",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina profesional para cardiólogos"
+    },
+    {
+      "speaker_name": "Oncólogo",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina autoritaria para oncólogos"
+    },
+    {
+      "speaker_name": "Radio-oncólogo",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina autoritaria para radio-oncólogos"
+    },
+    {
+      "speaker_name": "Neurocirujano",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina precisa para neurocirujanos"
+    },
+    {
+      "speaker_name": "Neurólogo",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina calmada para neurólogos"
+    },
+    {
+      "speaker_name": "Residente",
+      "voice_id": "VR6AewLTigWG4xSOukaG",
+      "voice_name": "Josh",
+      "voice_description": "Voz masculina joven para residentes médicos"
+    },
+    {
+      "speaker_name": "Enfermera",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina clara y profesional para enfermeras"
+    },
+    {
+      "speaker_name": "Psiquiatra",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina empática para psiquiatras"
+    },
+    {
+      "speaker_name": "Nefrólogo",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina técnica para nefrólogos"
+    },
+    {
+      "speaker_name": "Infectólogo",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina detallada para infectólogos"
+    },
+    {
+      "speaker_name": "Cirujano",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina autoritaria para cirujanos"
+    },
+    {
+      "speaker_name": "Anestesiólogo",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina calmada para anestesiólogos"
+    },
+    {
+      "speaker_name": "Perfusionista",
+      "voice_id": "VR6AewLTigWG4xSOukaG",
+      "voice_name": "Josh",
+      "voice_description": "Voz masculina técnica para perfusionistas"
+    },
+    {
+      "speaker_name": "Endocrinólogo",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina explicativa para endocrinólogos"
+    },
+    {
+      "speaker_name": "Gastroenterólogo",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina detallada para gastroenterólogos"
+    },
+    {
+      "speaker_name": "Endoscopista",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina técnica para endoscopistas"
+    },
+    {
+      "speaker_name": "Reumatólogo",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina empática para reumatólogos"
+    },
+    {
+      "speaker_name": "Neumólogo",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina respiratoria para neumólogos"
+    },
+    {
+      "speaker_name": "Intensivista",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina urgente para intensivistas"
+    },
+    {
+      "speaker_name": "Dermatólogo",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina clara para dermatólogos"
+    },
+    {
+      "speaker_name": "Padre",
+      "voice_id": "AZnzlk1XvdvUeBnXmlld",
+      "voice_name": "Domi",
+      "voice_description": "Voz masculina preocupada para padres"
+    },
+    {
+      "speaker_name": "Madre",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina angustiada para madres"
+    },
+    {
+      "speaker_name": "Familiar",
+      "voice_id": "AZnzlk1XvdvUeBnXmlld",
+      "voice_name": "Domi",
+      "voice_description": "Voz masculina familiar preocupada"
+    }
+  ],
+  "audio_config": {
+    "model_id": "eleven_v3",
+    "output_format": "mp3_44100_128",
+    "stability": 0.5,
+    "use_speaker_boost": true,
+    "apply_text_normalization": "auto",
+    "use_audio_tags": true,
+    "language_code": null
+  },
+  "audio_file_path": "generated_datasets/test/cardiology_consultation_01_4547e4b2_conversation.mp3",
+  "transcript_file_path": "generated_datasets/test/cardiology_consultation_01_4547e4b2_transcript.json",
+  "created_at": "2025-09-07T17:42:02.590841",
+  "stt_evaluation_ready": true
+}

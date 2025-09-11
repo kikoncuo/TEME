@@ -1,0 +1,333 @@
+{
+  "batch_id": "batch_20250907_174452",
+  "scenarios": [
+    {
+      "scenario_id": "cardiology_consultation_01",
+      "title": "Consulta Cardiología - Arritmias Complejas",
+      "description": "Cardiólogo explica arritmias ventriculares complejas y discute anticoagulantes",
+      "context": "Consulta especializada de cardiología donde el cardiólogo explica al paciente las arritmias ventriculares detectadas en su Holter, discute opciones de ablación por catéter, y prescribe warfarina con monitorización de INR. El paciente interrumpe constantemente con preguntas sobre los efectos secundarios de la amiodarona y digoxina.",
+      "participants": [
+        "Cardiólogo",
+        "Paciente"
+      ],
+      "target_duration": 180,
+      "difficulty_level": "hard",
+      "language": "es",
+      "domain": "cardiology"
+    },
+    {
+      "scenario_id": "oncology_rounds_01",
+      "title": "Visita Oncológica - Carcinoma Pulmonar Avanzado",
+      "description": "Equipo oncológico discute protocolo de quimioterapia multimodal",
+      "context": "Sala de oncología donde oncólogo médico, radio-oncólogo y enfermera oncóloga discuten el caso de carcinoma pulmonar no microcítico estadio IIIB. Debaten sobre pembrolizumab más quimioterapia neoadyuvante, radioterapia conformacional 3D, y posibles toxicidades del docetaxel y ciclofosfamida. El paciente y su familia escuchan atentamente mientras suena el monitor de signos vitales.",
+      "participants": [
+        "Oncólogo",
+        "Radio-oncólogo",
+        "Enfermera",
+        "Paciente",
+        "Familiar"
+      ],
+      "target_duration": 240,
+      "difficulty_level": "hard",
+      "language": "es",
+      "domain": "oncology"
+    },
+    {
+      "scenario_id": "neurosurgery_consultation_01",
+      "title": "Consulta Neurocirugía - Glioblastoma Multiforme",
+      "description": "Neurocirujano explica cirugía de glioblastoma con awake craniotomía",
+      "context": "Consulta de neurocirugía donde el neurocirujano explica al paciente con glioblastoma multiforme grado IV las opciones de resección tumoral con mapeo cortical awake, discutiendo riesgos de afasia, hemiparesia, y la necesidad de dexametasona para controlar el edema cerebral. El paciente interrumpe con preguntas sobre temozolomida y radioterapia hipofraccionada.",
+      "participants": [
+        "Neurocirujano",
+        "Paciente"
+      ],
+      "target_duration": 200,
+      "difficulty_level": "hard",
+      "language": "es",
+      "domain": "neurosurgery"
+    },
+    {
+      "scenario_id": "emergency_room_01",
+      "title": "Urgencias - Síndrome Coronario Agudo",
+      "description": "Equipo de emergencias maneja infarto agudo de miocardio",
+      "context": "Sala de emergencias con ruido de monitores cardíacos y ventiladores. Cardiólogo de guardia, residente de emergencias y enfermera discuten el manejo de infarto agudo de miocardio con elevación del ST. Debaten sobre angioplastia primaria vs trombolisis con alteplasa, anticoagulación con enoxaparina, y el paciente grita de dolor mientras se prepara para el cateterismo cardíaco urgente.",
+      "participants": [
+        "Cardiólogo",
+        "Residente",
+        "Enfermera",
+        "Paciente"
+      ],
+      "target_duration": 220,
+      "difficulty_level": "hard",
+      "language": "es",
+      "domain": "emergency_medicine"
+    }
+  ],
+  "voice_mappings": [
+    {
+      "speaker_name": "Doctor",
+      "voice_id": "tXgbXPnsMpKXkuTgvE3h",
+      "voice_name": "Elena",
+      "voice_description": "Voz femenina profesional, adecuada para médicos"
+    },
+    {
+      "speaker_name": "Paciente",
+      "voice_id": "AZnzlk1XvdvUeBnXmlld",
+      "voice_name": "Domi",
+      "voice_description": "Voz masculina conversacional, adecuada para pacientes"
+    },
+    {
+      "speaker_name": "Manager",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina autoritaria, adecuada para gerentes"
+    },
+    {
+      "speaker_name": "Desarrollador",
+      "voice_id": "VR6AewLTigWG4xSOukaG",
+      "voice_name": "Josh",
+      "voice_description": "Voz masculina joven, adecuada para desarrolladores"
+    },
+    {
+      "speaker_name": "Diseñador",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina creativa, adecuada para diseñadores"
+    },
+    {
+      "speaker_name": "Agente",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina profesional para agentes de soporte"
+    },
+    {
+      "speaker_name": "Cliente",
+      "voice_id": "AZnzlk1XvdvUeBnXmlld",
+      "voice_name": "Domi",
+      "voice_description": "Voz masculina natural para clientes"
+    },
+    {
+      "speaker_name": "Recepcionista",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina amigable para recepcionistas"
+    },
+    {
+      "speaker_name": "Entrevistador",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina profesional para entrevistadores"
+    },
+    {
+      "speaker_name": "Candidato",
+      "voice_id": "VR6AewLTigWG4xSOukaG",
+      "voice_name": "Josh",
+      "voice_description": "Voz masculina joven para candidatos"
+    },
+    {
+      "speaker_name": "Alex",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina amigable para conversaciones casuales"
+    },
+    {
+      "speaker_name": "Sam",
+      "voice_id": "AZnzlk1XvdvUeBnXmlld",
+      "voice_name": "Domi",
+      "voice_description": "Voz masculina amigable para conversaciones casuales"
+    },
+    {
+      "speaker_name": "Asesor",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina profesional para asesores financieros"
+    },
+    {
+      "speaker_name": "Farmacéutico",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina conocedora para farmacéuticos"
+    },
+    {
+      "speaker_name": "Taxista",
+      "voice_id": "AZnzlk1XvdvUeBnXmlld",
+      "voice_name": "Domi",
+      "voice_description": "Voz masculina casual para taxistas"
+    },
+    {
+      "speaker_name": "Pasajero",
+      "voice_id": "VR6AewLTigWG4xSOukaG",
+      "voice_name": "Josh",
+      "voice_description": "Voz masculina natural para pasajeros"
+    },
+    {
+      "speaker_name": "Profesor",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina educativa para profesores"
+    },
+    {
+      "speaker_name": "Estudiante",
+      "voice_id": "VR6AewLTigWG4xSOukaG",
+      "voice_name": "Josh",
+      "voice_description": "Voz masculina joven para estudiantes"
+    },
+    {
+      "speaker_name": "Cardiólogo",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina profesional para cardiólogos"
+    },
+    {
+      "speaker_name": "Oncólogo",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina autoritaria para oncólogos"
+    },
+    {
+      "speaker_name": "Radio-oncólogo",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina autoritaria para radio-oncólogos"
+    },
+    {
+      "speaker_name": "Neurocirujano",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina precisa para neurocirujanos"
+    },
+    {
+      "speaker_name": "Neurólogo",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina calmada para neurólogos"
+    },
+    {
+      "speaker_name": "Residente",
+      "voice_id": "VR6AewLTigWG4xSOukaG",
+      "voice_name": "Josh",
+      "voice_description": "Voz masculina joven para residentes médicos"
+    },
+    {
+      "speaker_name": "Enfermera",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina clara y profesional para enfermeras"
+    },
+    {
+      "speaker_name": "Psiquiatra",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina empática para psiquiatras"
+    },
+    {
+      "speaker_name": "Nefrólogo",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina técnica para nefrólogos"
+    },
+    {
+      "speaker_name": "Infectólogo",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina detallada para infectólogos"
+    },
+    {
+      "speaker_name": "Cirujano",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina autoritaria para cirujanos"
+    },
+    {
+      "speaker_name": "Anestesiólogo",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina calmada para anestesiólogos"
+    },
+    {
+      "speaker_name": "Perfusionista",
+      "voice_id": "VR6AewLTigWG4xSOukaG",
+      "voice_name": "Josh",
+      "voice_description": "Voz masculina técnica para perfusionistas"
+    },
+    {
+      "speaker_name": "Endocrinólogo",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina explicativa para endocrinólogos"
+    },
+    {
+      "speaker_name": "Gastroenterólogo",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina detallada para gastroenterólogos"
+    },
+    {
+      "speaker_name": "Endoscopista",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina técnica para endoscopistas"
+    },
+    {
+      "speaker_name": "Reumatólogo",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina empática para reumatólogos"
+    },
+    {
+      "speaker_name": "Neumólogo",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina respiratoria para neumólogos"
+    },
+    {
+      "speaker_name": "Intensivista",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina urgente para intensivistas"
+    },
+    {
+      "speaker_name": "Dermatólogo",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina clara para dermatólogos"
+    },
+    {
+      "speaker_name": "Padre",
+      "voice_id": "AZnzlk1XvdvUeBnXmlld",
+      "voice_name": "Domi",
+      "voice_description": "Voz masculina preocupada para padres"
+    },
+    {
+      "speaker_name": "Madre",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina angustiada para madres"
+    },
+    {
+      "speaker_name": "Familiar",
+      "voice_id": "AZnzlk1XvdvUeBnXmlld",
+      "voice_name": "Domi",
+      "voice_description": "Voz masculina familiar preocupada"
+    }
+  ],
+  "audio_config": {
+    "model_id": "eleven_v3",
+    "output_format": "mp3_44100_128",
+    "stability": 0.5,
+    "use_speaker_boost": true,
+    "apply_text_normalization": "auto",
+    "use_audio_tags": true,
+    "language_code": null
+  },
+  "output_directory": "generated_datasets/batch_batch_20250907_174452",
+  "status": "completed",
+  "created_at": "2025-09-07T17:44:52.618072",
+  "completed_entries": [
+    "cardiology_consultation_01_3e580894",
+    "oncology_rounds_01_95b55bb4",
+    "neurosurgery_consultation_01_585bee5e",
+    "emergency_room_01_cc767de6"
+  ],
+  "failed_entries": []
+}

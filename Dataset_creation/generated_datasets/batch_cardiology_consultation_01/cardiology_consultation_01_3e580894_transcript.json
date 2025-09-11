@@ -1,0 +1,128 @@
+{
+  "scenario_id": "cardiology_consultation_01",
+  "title": "Consulta Cardiología - Arritmias Complejas",
+  "context": "Consulta especializada de cardiología donde el cardiólogo explica al paciente las arritmias ventriculares detectadas en su Holter, discute opciones de ablación por catéter, y prescribe warfarina con monitorización de INR. El paciente interrumpe constantemente con preguntas sobre los efectos secundarios de la amiodarona y digoxina.",
+  "turns": [
+    {
+      "speaker": "Cardiólogo",
+      "text": "Buenas tardes, señor García. He revisado los resultados del Holter de 48 horas y, como sospechábamos, se han detectado múltiples episodios de taquicardia ventricular no sostenida, algunos con morfología polimórfica. Quiero explicarle en detalle lo que significa y las opciones terapéuticas disponibles.",
+      "duration_estimate": 18.0,
+      "voice_characteristics": "profesional"
+    },
+    {
+      "speaker": "Paciente",
+      "text": "Doctor, ¿eso es peligroso? ¿Eso puede causar un infarto o algo así? La verdad es que me siento un poco asustado…",
+      "duration_estimate": 10.0,
+      "voice_characteristics": "anxious"
+    },
+    {
+      "speaker": "Cardiólogo",
+      "text": "Entiendo su preocupación. Las arritmias ventriculares complejas como las que usted presenta pueden aumentar el riesgo de eventos graves, como fibrilación ventricular o incluso muerte súbita, especialmente si hay cardiopatía estructural subyacente. Por eso es fundamental tratarlas de forma adecuada.",
+      "duration_estimate": 16.0,
+      "voice_characteristics": "reassuring"
+    },
+    {
+      "speaker": "Paciente",
+      "text": "¿Y la amiodarona que estoy tomando no es suficiente? Porque he leído que puede causar problemas en la tiroides y los pulmones. ¿Qué pasa si me da efectos secundarios?",
+      "duration_estimate": 12.0,
+      "voice_characteristics": "curious"
+    },
+    {
+      "speaker": "Cardiólogo",
+      "text": "La amiodarona es eficaz para controlar arritmias ventriculares, pero, como usted bien dice, tiene un perfil de efectos adversos significativo: puede afectar la función tiroidea, causar fibrosis pulmonar, hepatotoxicidad y alteraciones en la córnea. Por eso, siempre valoramos el riesgo-beneficio y realizamos controles periódicos de función hepática, perfil tiroideo y radiografías de tórax.",
+      "duration_estimate": 19.0,
+      "voice_characteristics": "authoritative"
+    },
+    {
+      "speaker": "Paciente",
+      "text": "¿Y si mejor me cambio a digoxina? ¿No es más segura? Mi vecino la toma y dice que no ha tenido ningún problema.",
+      "duration_estimate": 9.0,
+      "voice_characteristics": "questioning"
+    },
+    {
+      "speaker": "Cardiólogo",
+      "text": "La digoxina tiene indicaciones muy específicas, sobre todo en insuficiencia cardíaca con fibrilación auricular. En arritmias ventriculares puede, incluso, ser proarrítmica, es decir, aumentar el riesgo de arritmias peligrosas. Además, hay riesgo de intoxicación digital si no se controla el nivel plasmático.",
+      "duration_estimate": 16.0,
+      "voice_characteristics": "emphatic"
+    },
+    {
+      "speaker": "Paciente",
+      "text": "Pero… si sigo con la amiodarona, ¿qué síntomas debo vigilar para saber si me está haciendo daño? ¿Hay algo urgente por lo que deba acudir al hospital?",
+      "duration_estimate": 11.0,
+      "voice_characteristics": "nervous"
+    },
+    {
+      "speaker": "Cardiólogo",
+      "text": "Debe consultar si nota disnea progresiva, tos seca persistente, alteraciones visuales, cambios en la piel, como coloración azulada, o síntomas de hipotiroidismo o hipertiroidismo. Si aparece bradicardia sintomática, palpitaciones intensas o síncope, debe acudir a urgencias de inmediato.",
+      "duration_estimate": 15.0,
+      "voice_characteristics": "reassuring"
+    },
+    {
+      "speaker": "Paciente",
+      "text": "Entiendo… ¿Y eso de la ablación por catéter que mencionó la última vez, es mejor que tomar medicamentos? ¿Puedo dejar los fármacos si me hacen la ablación?",
+      "duration_estimate": 11.0,
+      "voice_characteristics": "curious"
+    },
+    {
+      "speaker": "Cardiólogo",
+      "text": "La ablación por catéter es una opción en casos de arritmias ventriculares refractarias o cuando los efectos adversos de los antiarrítmicos son inaceptables. Es un procedimiento invasivo guiado por electrofisiología, donde se localiza el foco arritmogénico y se elimina mediante radiofrecuencia o crioablación. No siempre permite suspender la medicación, pero puede reducir la carga arrítmica significativamente.",
+      "duration_estimate": 21.0,
+      "voice_characteristics": "professional"
+    },
+    {
+      "speaker": "Paciente",
+      "text": "Vale, pero entonces, ¿qué me recomienda ahora? Porque no quiero estar tomando algo que me haga daño, pero tampoco quiero otro susto…",
+      "duration_estimate": 10.0,
+      "voice_characteristics": "frustrated"
+    },
+    {
+      "speaker": "Cardiólogo",
+      "text": "En su caso, recomendaría iniciar anticoagulación con warfarina, dada la carga arrítmica y el riesgo de tromboembolismo, sobre todo si aparecen episodios de fibrilación auricular. Es imprescindible monitorizar el INR, mantenerlo entre 2 y 3, y evitar interacciones con alimentos ricos en vitamina K.",
+      "duration_estimate": 17.0,
+      "voice_characteristics": "authoritative"
+    },
+    {
+      "speaker": "Paciente",
+      "text": "¿Y la warfarina no da hemorragias? Mi tía tuvo un sangrado fuerte por tomarla… ¿Cómo sé si estoy en riesgo?",
+      "duration_estimate": 10.0,
+      "voice_characteristics": "anxious"
+    },
+    {
+      "speaker": "Cardiólogo",
+      "text": "El riesgo principal de la warfarina es la hemorragia, por eso el control del INR es esencial. Le enseñaré a reconocer signos de alarma, como hematomas espontáneos, sangrado nasal, sangre en orina o heces, o hemorragias en encías. Cualquier síntoma así, debe acudir inmediatamente a urgencias.",
+      "duration_estimate": 15.0,
+      "voice_characteristics": "reassuring"
+    },
+    {
+      "speaker": "Paciente",
+      "text": "¿Y cada cuánto tengo que hacerme esos controles de INR? Y si un día se me olvida la pastilla, ¿qué hago?",
+      "duration_estimate": 9.0,
+      "voice_characteristics": "questioning"
+    },
+    {
+      "speaker": "Cardiólogo",
+      "text": "Al principio, el control debe ser semanal hasta estabilizar la dosis. Luego, pueden espaciarse a cada tres o cuatro semanas. Si olvida una dosis, tómela cuanto antes, pero nunca doble la siguiente. Y recuerde avisar si inicia cualquier otro medicamento, especialmente antibióticos o antiinflamatorios.",
+      "duration_estimate": 15.0,
+      "voice_characteristics": "warm"
+    },
+    {
+      "speaker": "Paciente",
+      "text": "Muchas gracias, doctor. Sé que hago muchas preguntas, pero prefiero entender bien todo esto. ¿Podría darme algún folleto o material para leer en casa?",
+      "duration_estimate": 11.0,
+      "voice_characteristics": "curious"
+    },
+    {
+      "speaker": "Cardiólogo",
+      "text": "Por supuesto, le entregaré una guía sobre anticoagulación y un resumen sobre los cuidados con amiodarona. No dude en llamar si surge cualquier duda o síntoma nuevo. Estamos aquí para acompañarlo en todo momento.",
+      "duration_estimate": 12.0,
+      "voice_characteristics": "reassuring"
+    }
+  ],
+  "metadata": {
+    "word_count": 653,
+    "turn_count": 19,
+    "avg_turn_length": 34.36842105263158
+  },
+  "estimated_total_duration": 261.2,
+  "generated_at": "2024-06-13T14:55:00Z"
+}

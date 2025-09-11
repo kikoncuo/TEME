@@ -1,0 +1,152 @@
+[
+  {
+    "speaker_name": "Doctor",
+    "voice_id": "21m00Tcm4TlvDq8ikWAM",
+    "voice_name": "Rachel",
+    "voice_description": "Professional female voice, suitable for medical professionals"
+  },
+  {
+    "speaker_name": "Patient",
+    "voice_id": "AZnzlk1XvdvUeBnXmlld",
+    "voice_name": "Domi",
+    "voice_description": "Conversational male voice, suitable for patients"
+  },
+  {
+    "speaker_name": "Cardiologist",
+    "voice_id": "21m00Tcm4TlvDq8ikWAM",
+    "voice_name": "Rachel",
+    "voice_description": "Professional female voice for cardiologists"
+  },
+  {
+    "speaker_name": "Oncologist",
+    "voice_id": "EXAVITQu4vr4xnSDxMaL",
+    "voice_name": "Sarah",
+    "voice_description": "Authoritative female voice for oncologists"
+  },
+  {
+    "speaker_name": "Radiologist",
+    "voice_id": "pNInz6obpgDQGcFmaJgB",
+    "voice_name": "Adam",
+    "voice_description": "Authoritative male voice for radiologists"
+  },
+  {
+    "speaker_name": "Neurosurgeon",
+    "voice_id": "21m00Tcm4TlvDq8ikWAM",
+    "voice_name": "Rachel",
+    "voice_description": "Precise female voice for neurosurgeons"
+  },
+  {
+    "speaker_name": "Neurologist",
+    "voice_id": "pNInz6obpgDQGcFmaJgB",
+    "voice_name": "Adam",
+    "voice_description": "Calm male voice for neurologists"
+  },
+  {
+    "speaker_name": "Resident",
+    "voice_id": "VR6AewLTigWG4xSOukaG",
+    "voice_name": "Josh",
+    "voice_description": "Young male voice for medical residents"
+  },
+  {
+    "speaker_name": "Nurse",
+    "voice_id": "EXAVITQu4vr4xnSDxMaL",
+    "voice_name": "Sarah",
+    "voice_description": "Clear female voice for nurses"
+  },
+  {
+    "speaker_name": "Psychiatrist",
+    "voice_id": "EXAVITQu4vr4xnSDxMaL",
+    "voice_name": "Sarah",
+    "voice_description": "Empathetic female voice for psychiatrists"
+  },
+  {
+    "speaker_name": "Nephrologist",
+    "voice_id": "pNInz6obpgDQGcFmaJgB",
+    "voice_name": "Adam",
+    "voice_description": "Technical male voice for nephrologists"
+  },
+  {
+    "speaker_name": "Infectious Disease Specialist",
+    "voice_id": "21m00Tcm4TlvDq8ikWAM",
+    "voice_name": "Rachel",
+    "voice_description": "Detailed female voice for infectious disease specialists"
+  },
+  {
+    "speaker_name": "Surgeon",
+    "voice_id": "21m00Tcm4TlvDq8ikWAM",
+    "voice_name": "Rachel",
+    "voice_description": "Authoritative female voice for surgeons"
+  },
+  {
+    "speaker_name": "Anesthesiologist",
+    "voice_id": "pNInz6obpgDQGcFmaJgB",
+    "voice_name": "Adam",
+    "voice_description": "Calm male voice for anesthesiologists"
+  },
+  {
+    "speaker_name": "Perfusionist",
+    "voice_id": "VR6AewLTigWG4xSOukaG",
+    "voice_name": "Josh",
+    "voice_description": "Technical male voice for perfusionists"
+  },
+  {
+    "speaker_name": "Endocrinologist",
+    "voice_id": "EXAVITQu4vr4xnSDxMaL",
+    "voice_name": "Sarah",
+    "voice_description": "Explanatory female voice for endocrinologists"
+  },
+  {
+    "speaker_name": "Gastroenterologist",
+    "voice_id": "21m00Tcm4TlvDq8ikWAM",
+    "voice_name": "Rachel",
+    "voice_description": "Detailed female voice for gastroenterologists"
+  },
+  {
+    "speaker_name": "Endoscopist",
+    "voice_id": "pNInz6obpgDQGcFmaJgB",
+    "voice_name": "Adam",
+    "voice_description": "Technical male voice for endoscopists"
+  },
+  {
+    "speaker_name": "Rheumatologist",
+    "voice_id": "EXAVITQu4vr4xnSDxMaL",
+    "voice_name": "Sarah",
+    "voice_description": "Empathetic female voice for rheumatologists"
+  },
+  {
+    "speaker_name": "Pulmonologist",
+    "voice_id": "21m00Tcm4TlvDq8ikWAM",
+    "voice_name": "Rachel",
+    "voice_description": "Breathy female voice for pulmonologists"
+  },
+  {
+    "speaker_name": "Intensivist",
+    "voice_id": "pNInz6obpgDQGcFmaJgB",
+    "voice_name": "Adam",
+    "voice_description": "Urgent male voice for intensivists"
+  },
+  {
+    "speaker_name": "Dermatologist",
+    "voice_id": "EXAVITQu4vr4xnSDxMaL",
+    "voice_name": "Sarah",
+    "voice_description": "Clear female voice for dermatologists"
+  },
+  {
+    "speaker_name": "Father",
+    "voice_id": "AZnzlk1XvdvUeBnXmlld",
+    "voice_name": "Domi",
+    "voice_description": "Worried male voice for fathers"
+  },
+  {
+    "speaker_name": "Mother",
+    "voice_id": "21m00Tcm4TlvDq8ikWAM",
+    "voice_name": "Rachel",
+    "voice_description": "Distressed female voice for mothers"
+  },
+  {
+    "speaker_name": "Family Member",
+    "voice_id": "AZnzlk1XvdvUeBnXmlld",
+    "voice_name": "Domi",
+    "voice_description": "Worried male voice for family members"
+  }
+]

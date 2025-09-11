@@ -1,0 +1,92 @@
+{
+  "scenario_id": "neurosurgery_consultation_01",
+  "title": "Consulta Neurocirugía - Glioblastoma Multiforme",
+  "context": "Consulta de neurocirugía donde el neurocirujano explica al paciente con glioblastoma multiforme grado IV las opciones de resección tumoral con mapeo cortical awake, discutiendo riesgos de afasia, hemiparesia, y la necesidad de dexametasona para controlar el edema cerebral. El paciente interrumpe con preguntas sobre temozolomida y radioterapia hipofraccionada.",
+  "turns": [
+    {
+      "speaker": "Neurocirujano",
+      "text": "Buenos días, señor Rodríguez. Hoy quiero explicarle en detalle el plan quirúrgico que proponemos para su diagnóstico de glioblastoma multiforme, grado cuatro. Dado que el tumor está en una zona funcional del cerebro, consideramos realizar una craneotomía despierta, lo que nos permitirá hacer un mapeo cortical intraoperatorio para minimizar el riesgo de secuelas, especialmente afasia o hemiparesia.",
+      "duration_estimate": 25.0,
+      "voice_characteristics": "profesional"
+    },
+    {
+      "speaker": "Paciente",
+      "text": "Perdón, doctor, ¿eso significa que voy a estar despierto durante la cirugía? Suena, um, un poco inquietante. ¿Cómo funciona exactamente?",
+      "duration_estimate": 13.0,
+      "voice_characteristics": "anxious"
+    },
+    {
+      "speaker": "Neurocirujano",
+      "text": "Sí, entiendo que suena inquietante, pero lo hacemos para poder monitorizar en tiempo real sus funciones del lenguaje y el movimiento. Usted estará dormido al principio y al final de la cirugía, pero durante la resección del tumor estará despierto para que podamos pedirle que hable, cuente o mueva una mano, por ejemplo. Así reducimos el riesgo de afectación en áreas críticas.",
+      "duration_estimate": 22.0,
+      "voice_characteristics": "reassuring"
+    },
+    {
+      "speaker": "Paciente",
+      "text": "Y, ¿qué probabilidades hay de que termine con problemas para hablar o moverme? La verdad, me preocupa mucho quedarme con secuelas graves.",
+      "duration_estimate": 11.0,
+      "voice_characteristics": "nervous"
+    },
+    {
+      "speaker": "Neurocirujano",
+      "text": "La localización del tumor implica cierto riesgo, inevitablemente. Con el mapeo cortical y la craneotomía despierta, intentamos maximizar la resección sin comprometer funciones vitales. Sin embargo, debemos hablar de riesgos reales: afasia, que es la dificultad para hablar o comprender, y hemiparesia, que es debilidad en una mitad del cuerpo. Según la literatura, incluso con todos estos cuidados, el riesgo de déficits permanentes puede estar entre un 10 y un 20 por ciento, dependiendo de la cercanía del tumor a áreas elocuentes.",
+      "duration_estimate": 26.0,
+      "voice_characteristics": "authoritative"
+    },
+    {
+      "speaker": "Paciente",
+      "text": "Ya veo… ¿Y el edema cerebral? He leído algo sobre la dexametasona. ¿Tendré que tomarla mucho tiempo? ¿Tiene efectos secundarios?",
+      "duration_estimate": 10.0,
+      "voice_characteristics": "curious"
+    },
+    {
+      "speaker": "Neurocirujano",
+      "text": "Buena pregunta. La dexametasona es un corticosteroide que utilizamos para reducir el edema cerebral, es decir, la inflamación que provoca el tumor. Normalmente la indicamos antes y después de la cirugía, y luego la vamos retirando de forma progresiva para minimizar efectos adversos, como hiperglucemia, insomnio, o debilidad muscular. La duración depende de cómo evolucione el edema en los controles postoperatorios.",
+      "duration_estimate": 19.0,
+      "voice_characteristics": "professional"
+    },
+    {
+      "speaker": "Paciente",
+      "text": "Entiendo. Y, doctor, ¿qué pasa después de la cirugía? ¿Voy a necesitar quimio y radio? Me mencionaron la temozolomida y algo de radioterapia hipofraccionada, pero no sé qué significa exactamente.",
+      "duration_estimate": 14.0,
+      "voice_characteristics": "questioning"
+    },
+    {
+      "speaker": "Neurocirujano",
+      "text": "Correcto, tras la resección, el estándar es realizar tratamiento adyuvante. La temozolomida es una quimioterapia oral que atraviesa la barrera hematoencefálica y ha demostrado mejorar la supervivencia en el glioblastoma. La radioterapia hipofraccionada es un esquema donde se administran dosis mayores en menos sesiones, útil en pacientes de mayor edad o con comorbilidades. Todo esto lo evaluaremos junto con el equipo de oncología radioterápica y neuro-oncología.",
+      "duration_estimate": 24.0,
+      "voice_characteristics": "confident"
+    },
+    {
+      "speaker": "Paciente",
+      "text": "¿Y esos tratamientos, la temozolomida y la radioterapia, tienen muchos efectos secundarios? Me preocupa mucho cómo va a ser mi calidad de vida después.",
+      "duration_estimate": 10.0,
+      "voice_characteristics": "frustrated"
+    },
+    {
+      "speaker": "Neurocirujano",
+      "text": "Entiendo su preocupación. La temozolomida suele ser bien tolerada, aunque puede causar náuseas, neutropenia y trombocitopenia, por eso haremos controles de sangre frecuentes. La radioterapia puede causar fatiga, edema cerebral transitorio y, en algunos casos, déficit cognitivo, pero trabajaremos en equipo para optimizar su calidad de vida y controlar los síntomas.",
+      "duration_estimate": 18.0,
+      "voice_characteristics": "warm"
+    },
+    {
+      "speaker": "Paciente",
+      "text": "Gracias, doctor. Es mucha información, pero prefiero saberlo todo. ¿Hay algo más que deba preguntar o considerar antes de decidir? No quiero quedarme con dudas.",
+      "duration_estimate": 11.0,
+      "voice_characteristics": "curious"
+    },
+    {
+      "speaker": "Neurocirujano",
+      "text": "Mi consejo es que hable también con su familia y, si lo desea, con nuestro equipo de psicología oncológica. Esta decisión es compleja y debe sentirse acompañado en el proceso. Si surge cualquier otra pregunta, estoy a su disposición en todo momento.",
+      "duration_estimate": 14.0,
+      "voice_characteristics": "reassuring"
+    }
+  ],
+  "metadata": {
+    "word_count": 562,
+    "turn_count": 13,
+    "avg_turn_length": 43.23076923076923
+  },
+  "estimated_total_duration": 224.79999999999998,
+  "generated_at": "2024-06-18T15:27:00Z"
+}

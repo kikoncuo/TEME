@@ -1,0 +1,25 @@
+[
+  {
+    "scenario_id": "test_cardiology_01",
+    "title": "Test Cardiología",
+    "description": "Test cardiology consultation",
+    "context": "Cardiology office consultation",
+    "participants": ["Cardiólogo", "Paciente"],
+    "target_duration": 30,
+    "difficulty_level": "hard",
+    "language": "es",
+    "domain": "cardiology"
+  },
+  {
+    "scenario_id": "test_oncology_01",
+    "title": "Test Oncología",
+    "description": "Test oncology with nurse",
+    "context": "Oncology room consultation",
+    "participants": ["Oncólogo", "Enfermera", "Paciente"],
+    "target_duration": 25,
+    "difficulty_level": "hard",
+    "language": "es",
+    "domain": "oncology"
+  }
+]
+

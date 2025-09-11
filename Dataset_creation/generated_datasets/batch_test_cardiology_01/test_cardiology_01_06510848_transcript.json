@@ -1,0 +1,44 @@
+{
+  "scenario_id": "test_cardiology_01",
+  "title": "Test Cardiología",
+  "context": "Consulta en el consultorio de cardiología entre un cardiólogo y un paciente preocupado por síntomas recientes.",
+  "turns": [
+    {
+      "speaker": "Cardiólogo",
+      "text": "Buenos días, señor García. Cuénteme, ¿qué síntomas lo han traído hoy a la consulta? ¿Ha notado dolor torácico, disnea o palpitaciones últimamente?",
+      "duration_estimate": 7.0,
+      "voice_characteristics": "profesional questioning"
+    },
+    {
+      "speaker": "Paciente",
+      "text": "Eh, sí, doctor, la verdad es que hace unos días sentí un dolor opresivo en el pecho, sobre todo cuando subía las escaleras. Además, he estado algo mareado y me faltaba el aire, lo cual nunca me había pasado antes.",
+      "duration_estimate": 8.0,
+      "voice_characteristics": "anxious conversational"
+    },
+    {
+      "speaker": "Cardiólogo",
+      "text": "Entiendo. ¿Ha presentado también sudoración fría, náuseas o irradiación del dolor hacia el brazo izquierdo o la mandíbula? Es importante para descartar un síndrome coronario agudo.",
+      "duration_estimate": 7.0,
+      "voice_characteristics": "emphatic professional"
+    },
+    {
+      "speaker": "Paciente",
+      "text": "Pues, sudoración sí, pero no he sentido dolor en el brazo ni en la mandíbula. Me preocupa porque mi padre tuvo un infarto a los 54 años y, bueno, no sé si esto sea hereditario.",
+      "duration_estimate": 6.0,
+      "voice_characteristics": "frustrated soft-spoken"
+    },
+    {
+      "speaker": "Cardiólogo",
+      "text": "Es comprensible su preocupación, sobre todo con antecedentes familiares. Vamos a hacer un electrocardiograma y solicitar una biometría hemática y un perfil lipídico para evaluar riesgo cardiovascular. ¿De acuerdo?",
+      "duration_estimate": 7.0,
+      "voice_characteristics": "reassuring warm"
+    }
+  ],
+  "metadata": {
+    "word_count": 152,
+    "turn_count": 5,
+    "avg_turn_length": 30.4
+  },
+  "estimated_total_duration": 60.800000000000004,
+  "generated_at": "2024-06-13T18:25:00Z"
+}

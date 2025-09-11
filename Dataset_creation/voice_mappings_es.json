@@ -1,0 +1,152 @@
+[
+  {
+    "speaker_name": "Doctor",
+    "voice_id": "tXgbXPnsMpKXkuTgvE3h",
+    "voice_name": "Elena",
+    "voice_description": "Voz femenina profesional, adecuada para médicos"
+  },
+  {
+    "speaker_name": "Paciente", 
+    "voice_id": "AZnzlk1XvdvUeBnXmlld",
+    "voice_name": "Domi",
+    "voice_description": "Voz masculina conversacional, adecuada para pacientes"
+  },
+  {
+    "speaker_name": "Cardiólogo",
+    "voice_id": "21m00Tcm4TlvDq8ikWAM",
+    "voice_name": "Rachel",
+    "voice_description": "Voz femenina profesional para cardiólogos"
+  },
+  {
+    "speaker_name": "Oncólogo",
+    "voice_id": "EXAVITQu4vr4xnSDxMaL",
+    "voice_name": "Sarah",
+    "voice_description": "Voz femenina autoritaria para oncólogos"
+  },
+  {
+    "speaker_name": "Radio-oncólogo",
+    "voice_id": "pNInz6obpgDQGcFmaJgB",
+    "voice_name": "Adam",
+    "voice_description": "Voz masculina autoritaria para radio-oncólogos"
+  },
+  {
+    "speaker_name": "Neurocirujano",
+    "voice_id": "21m00Tcm4TlvDq8ikWAM",
+    "voice_name": "Rachel",
+    "voice_description": "Voz femenina precisa para neurocirujanos"
+  },
+  {
+    "speaker_name": "Neurólogo",
+    "voice_id": "pNInz6obpgDQGcFmaJgB",
+    "voice_name": "Adam",
+    "voice_description": "Voz masculina calmada para neurólogos"
+  },
+  {
+    "speaker_name": "Residente",
+    "voice_id": "VR6AewLTigWG4xSOukaG",
+    "voice_name": "Josh",
+    "voice_description": "Voz masculina joven para residentes médicos"
+  },
+  {
+    "speaker_name": "Enfermera",
+    "voice_id": "EXAVITQu4vr4xnSDxMaL",
+    "voice_name": "Sarah",
+    "voice_description": "Voz femenina clara y profesional para enfermeras"
+  },
+  {
+    "speaker_name": "Psiquiatra",
+    "voice_id": "EXAVITQu4vr4xnSDxMaL",
+    "voice_name": "Sarah",
+    "voice_description": "Voz femenina empática para psiquiatras"
+  },
+  {
+    "speaker_name": "Nefrólogo",
+    "voice_id": "pNInz6obpgDQGcFmaJgB",
+    "voice_name": "Adam",
+    "voice_description": "Voz masculina técnica para nefrólogos"
+  },
+  {
+    "speaker_name": "Infectólogo",
+    "voice_id": "21m00Tcm4TlvDq8ikWAM",
+    "voice_name": "Rachel",
+    "voice_description": "Voz femenina detallada para infectólogos"
+  },
+  {
+    "speaker_name": "Cirujano",
+    "voice_id": "21m00Tcm4TlvDq8ikWAM",
+    "voice_name": "Rachel",
+    "voice_description": "Voz femenina autoritaria para cirujanos"
+  },
+  {
+    "speaker_name": "Anestesiólogo",
+    "voice_id": "pNInz6obpgDQGcFmaJgB",
+    "voice_name": "Adam",
+    "voice_description": "Voz masculina calmada para anestesiólogos"
+  },
+  {
+    "speaker_name": "Perfusionista",
+    "voice_id": "VR6AewLTigWG4xSOukaG",
+    "voice_name": "Josh",
+    "voice_description": "Voz masculina técnica para perfusionistas"
+  },
+  {
+    "speaker_name": "Endocrinólogo",
+    "voice_id": "EXAVITQu4vr4xnSDxMaL",
+    "voice_name": "Sarah",
+    "voice_description": "Voz femenina explicativa para endocrinólogos"
+  },
+  {
+    "speaker_name": "Gastroenterólogo",
+    "voice_id": "21m00Tcm4TlvDq8ikWAM",
+    "voice_name": "Rachel",
+    "voice_description": "Voz femenina detallada para gastroenterólogos"
+  },
+  {
+    "speaker_name": "Endoscopista",
+    "voice_id": "pNInz6obpgDQGcFmaJgB",
+    "voice_name": "Adam",
+    "voice_description": "Voz masculina técnica para endoscopistas"
+  },
+  {
+    "speaker_name": "Reumatólogo",
+    "voice_id": "EXAVITQu4vr4xnSDxMaL",
+    "voice_name": "Sarah",
+    "voice_description": "Voz femenina empática para reumatólogos"
+  },
+  {
+    "speaker_name": "Neumólogo",
+    "voice_id": "21m00Tcm4TlvDq8ikWAM",
+    "voice_name": "Rachel",
+    "voice_description": "Voz femenina respiratoria para neumólogos"
+  },
+  {
+    "speaker_name": "Intensivista",
+    "voice_id": "pNInz6obpgDQGcFmaJgB",
+    "voice_name": "Adam",
+    "voice_description": "Voz masculina urgente para intensivistas"
+  },
+  {
+    "speaker_name": "Dermatólogo",
+    "voice_id": "EXAVITQu4vr4xnSDxMaL",
+    "voice_name": "Sarah",
+    "voice_description": "Voz femenina clara para dermatólogos"
+  },
+  {
+    "speaker_name": "Padre",
+    "voice_id": "AZnzlk1XvdvUeBnXmlld",
+    "voice_name": "Domi",
+    "voice_description": "Voz masculina preocupada para padres"
+  },
+  {
+    "speaker_name": "Madre",
+    "voice_id": "21m00Tcm4TlvDq8ikWAM",
+    "voice_name": "Rachel",
+    "voice_description": "Voz femenina angustiada para madres"
+  },
+  {
+    "speaker_name": "Familiar",
+    "voice_id": "AZnzlk1XvdvUeBnXmlld",
+    "voice_name": "Domi",
+    "voice_description": "Voz masculina familiar preocupada"
+  }
+]

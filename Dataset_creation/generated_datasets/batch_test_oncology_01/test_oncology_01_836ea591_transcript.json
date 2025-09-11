@@ -1,0 +1,50 @@
+{
+  "scenario_id": "test_oncology_01",
+  "title": "Test Oncología",
+  "context": "Consulta en sala de oncología entre oncólogo, paciente y enfermera. El paciente espera resultados y tiene dudas sobre el tratamiento.",
+  "turns": [
+    {
+      "speaker": "Oncólogo",
+      "text": "Buenos días, Marta. Veo que ya llegó su hemograma y los marcadores tumorales; antes de revisar los resultados, ¿cómo se ha sentido tras la última quimioterapia?",
+      "duration_estimate": 5.5,
+      "voice_characteristics": "profesional"
+    },
+    {
+      "speaker": "Paciente",
+      "text": "Pues, la verdad, doctora, he estado muy cansada y con náuseas constantes… um, además noté un poco de fiebre anoche. ¿Eso es normal? Me preocupa que sea neutropenia.",
+      "duration_estimate": 6.5,
+      "voice_characteristics": "anxious"
+    },
+    {
+      "speaker": "Enfermera",
+      "text": "Marta, ¿le ha salido alguna llaga en la boca o sangrado? Puedo revisar sus signos vitales mientras la doctora ve los análisis.",
+      "duration_estimate": 4.0,
+      "voice_characteristics": "reassuring"
+    },
+    {
+      "speaker": "Oncólogo",
+      "text": "El recuento de neutrófilos está bajo, pero no crítico; vamos a monitorizar de cerca. Si la fiebre supera los 38 grados, debe acudir a urgencias de inmediato, ¿de acuerdo?",
+      "duration_estimate": 5.0,
+      "voice_characteristics": "authoritative"
+    },
+    {
+      "speaker": "Paciente",
+      "text": "Entiendo. Gracias. ¿Y el tratamiento se mantiene igual o habrá que ajustarlo?",
+      "duration_estimate": 2.5,
+      "voice_characteristics": "questioning"
+    },
+    {
+      "speaker": "Oncólogo",
+      "text": "Por ahora continuamos igual, pero ajustaremos si hay más episodios. Me avisa cualquier cambio, ¿sí?",
+      "duration_estimate": 2.0,
+      "voice_characteristics": "warm"
+    }
+  ],
+  "metadata": {
+    "word_count": 132,
+    "turn_count": 6,
+    "avg_turn_length": 22.0
+  },
+  "estimated_total_duration": 52.8,
+  "generated_at": "2024-06-13T22:35:00Z"
+}

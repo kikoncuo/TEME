@@ -1,0 +1,386 @@
+{
+  "entry_id": "oncology_rounds_01_95b55bb4",
+  "conversation": {
+    "scenario_id": "oncology_rounds_01",
+    "title": "Visita Oncológica - Carcinoma Pulmonar Avanzado",
+    "context": "Sala de oncología donde oncólogo médico, radio-oncólogo y enfermera oncóloga discuten el caso de carcinoma pulmonar no microcítico estadio IIIB. Debaten sobre pembrolizumab más quimioterapia neoadyuvante, radioterapia conformacional 3D, y posibles toxicidades del docetaxel y ciclofosfamida. El paciente y su familia escuchan atentamente mientras suena el monitor de signos vitales.",
+    "turns": [
+      {
+        "speaker": "Oncólogo",
+        "text": "Bueno, antes de empezar, quiero asegurarme de que todos entienden el estado actual del paciente. Estamos hablando de un carcinoma pulmonar no microcítico en estadio IIIB, con afectación mediastínica y sin metástasis a distancia comprobadas. El objetivo principal es intentar un control locorregional y, si es posible, inducir una respuesta para considerar posteriormente una resección quirúrgica. ¿Están de acuerdo con este enfoque inicial?",
+        "duration_estimate": 22.0,
+        "voice_characteristics": "profesional autoritativo"
+      },
+      {
+        "speaker": "Radio-oncólogo",
+        "text": "Sí, completamente de acuerdo. Pero, eh, creo que deberíamos valorar la incorporación de radioterapia conformacional 3D desde el inicio, sobre todo considerando el compromiso ganglionar voluminoso. La radioterapia, en sinergia con la quimio-inmunoterapia, podría mejorar la tasa de control local. ¿Qué opinan sobre la secuenciación? ¿Neoadyuvante primero, o concurrente?",
+        "duration_estimate": 19.0,
+        "voice_characteristics": "curioso questioning"
+      },
+      {
+        "speaker": "Enfermera",
+        "text": "Perdón, ¿puedo intervenir un momento? Me preocupa el perfil de toxicidad, especialmente con la combinación de pembrolizumab, docetaxel y ciclofosfamida. Sabemos que el paciente ya tiene antecedentes de neutropenia grado 2 y algo de disnea basal. ¿No deberíamos monitorizar de forma más estricta y anticipar posibles complicaciones infecciosas?",
+        "duration_estimate": 17.0,
+        "voice_characteristics": "ansiosa soft-spoken"
+      },
+      {
+        "speaker": "Oncólogo",
+        "text": "Claro, es una observación muy válida. El riesgo de neutropenia febril es real y, con docetaxel, incluso más. Por eso, propongo considerar profilaxis primaria con factor estimulante de colonias de granulocitos, y ajustar las dosis si hay toxicidad hematológica relevante. Además, con pembrolizumab, debemos estar atentos a eventos adversos inmunomediados, como neumonitis o colitis autoinmune. ¿Algún síntoma nuevo en los últimos días?",
+        "duration_estimate": 20.0,
+        "voice_characteristics": "profesional enfático"
+      },
+      {
+        "speaker": "Paciente",
+        "text": "Eh, no, doctor, solamente un poco más de tos y, a veces, siento como un cansancio raro. No sé si eso es por el tumor o por los medicamentos que me están dando, pero no he tenido fiebre ni escalofríos.",
+        "duration_estimate": 12.0,
+        "voice_characteristics": "nervioso conversacional"
+      },
+      {
+        "speaker": "Familiar",
+        "text": "Disculpe, ¿y esas medicinas de inmunoterapia, el pembrolizumab, pueden dar efectos secundarios graves? Porque hemos leído cosas en internet que nos asustan un poco…",
+        "duration_estimate": 10.0,
+        "voice_characteristics": "ansioso questioning"
+      },
+      {
+        "speaker": "Oncólogo",
+        "text": "Sí, es muy pertinente su pregunta. El pembrolizumab actúa sobre el sistema inmunológico, así que puede causar inflamación en órganos como los pulmones, hígado o colon. Pero la mayoría de los efectos son manejables si los detectamos a tiempo. Por eso es fundamental que nos avisen ante cualquier síntoma nuevo, como dificultad respiratoria, dolor abdominal, diarrea persistente o ictericia.",
+        "duration_estimate": 18.0,
+        "voice_characteristics": "reassuring profesional"
+      },
+      {
+        "speaker": "Radio-oncólogo",
+        "text": "Respecto a la radioterapia, quisiera recalcar que, aunque la tecnología conformacional 3D nos permite limitar la dosis a los pulmones sanos y al corazón, existe riesgo de neumonitis radiactiva y, en menor medida, esofagitis grado 2 o 3. Por eso, la planificación será clave y programaremos controles de imagen frecuentes.",
+        "duration_estimate": 17.0,
+        "voice_characteristics": "profesional autoritativo"
+      },
+      {
+        "speaker": "Enfermera",
+        "text": "Perfecto, entonces vamos a programar los laboratorios semanales y haremos educación sobre signos de alarma. También sugeriría tener a la mano el contacto directo de la unidad de oncología para consultas fuera de horario, por si surge fiebre o algún síntoma sospechoso.",
+        "duration_estimate": 15.0,
+        "voice_characteristics": "warm reassuring"
+      },
+      {
+        "speaker": "Paciente",
+        "text": "¿Y la caída del pelo es segura que pasará? Porque, eh, la verdad, no es lo que más me preocupa, pero mi nieta me preguntó si me iba a quedar calvo.",
+        "duration_estimate": 10.0,
+        "voice_characteristics": "cheerful conversacional"
+      },
+      {
+        "speaker": "Oncólogo",
+        "text": "Sí, con docetaxel y ciclofosfamida es muy frecuente la alopecia, aunque reversible. Podemos considerar un gorro frío durante la infusión, pero su eficacia es limitada. Lo importante es priorizar la seguridad y el control del tumor. Si lo desean, podemos hablar con psicología para apoyo emocional.",
+        "duration_estimate": 15.0,
+        "voice_characteristics": "warm profesional"
+      },
+      {
+        "speaker": "Familiar",
+        "text": "Gracias, doctor. Nos tranquiliza saber que estarán atentos a todo. Pero, ¿cuánto tiempo durará todo el tratamiento y cuándo podemos saber si está funcionando?",
+        "duration_estimate": 10.0,
+        "voice_characteristics": "curious questioning"
+      },
+      {
+        "speaker": "Oncólogo",
+        "text": "El plan es administrar cuatro ciclos de quimio-inmunoterapia, seguidos de re-evaluación por imagen para valorar respuesta tumoral. Si hay reducción significativa, consideraremos cirugía o continuar con radioterapia. Cada dos ciclos haremos TAC de tórax y abdomen para monitorear evolución.",
+        "duration_estimate": 14.0,
+        "voice_characteristics": "confident profesional"
+      },
+      {
+        "speaker": "Radio-oncólogo",
+        "text": "Y, si todo va según lo previsto, la radioterapia se programaría después de la quimio, salvo que se requiera intervención urgente por síntomas compresivos. La duración total podría ser de cuatro a seis meses, dependiendo de la respuesta individual.",
+        "duration_estimate": 13.0,
+        "voice_characteristics": "profesional calmado"
+      },
+      {
+        "speaker": "Enfermera",
+        "text": "Entonces, para recapitular: empezamos con pembrolizumab, docetaxel y ciclofosfamida, más profilaxis para neutropenia. Laboratorios y controles clínicos semanales. Educación al paciente y la familia sobre síntomas de alarma, y contacto directo con el equipo. ¿Alguna otra inquietud antes de que preparemos la primera infusión?",
+        "duration_estimate": 15.0,
+        "voice_characteristics": "reassuring conversacional"
+      },
+      {
+        "speaker": "Paciente",
+        "text": "No, creo que todo quedó claro. Muchas gracias a todos por explicarnos tan bien, de verdad.",
+        "duration_estimate": 7.0,
+        "voice_characteristics": "warm agradecido"
+      },
+      {
+        "speaker": "Familiar",
+        "text": "Sí, gracias. Solo… bueno, que nos da miedo, pero confiamos en ustedes.",
+        "duration_estimate": 6.0,
+        "voice_characteristics": "nervioso emotivo"
+      },
+      {
+        "speaker": "Oncólogo",
+        "text": "Entendemos perfectamente. Estamos para apoyarlos en cada paso. Cualquier duda, no duden en llamarnos. Ahora, si están listos, empezamos con el protocolo.",
+        "duration_estimate": 10.0,
+        "voice_characteristics": "reassuring profesional"
+      }
+    ],
+    "metadata": {
+      "word_count": 710,
+      "turn_count": 18,
+      "avg_turn_length": 39.44444444444444
+    },
+    "estimated_total_duration": 284.0,
+    "generated_at": "2024-06-10T15:32:00Z"
+  },
+  "voice_mappings": [
+    {
+      "speaker_name": "Doctor",
+      "voice_id": "tXgbXPnsMpKXkuTgvE3h",
+      "voice_name": "Elena",
+      "voice_description": "Voz femenina profesional, adecuada para médicos"
+    },
+    {
+      "speaker_name": "Paciente",
+      "voice_id": "AZnzlk1XvdvUeBnXmlld",
+      "voice_name": "Domi",
+      "voice_description": "Voz masculina conversacional, adecuada para pacientes"
+    },
+    {
+      "speaker_name": "Manager",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina autoritaria, adecuada para gerentes"
+    },
+    {
+      "speaker_name": "Desarrollador",
+      "voice_id": "VR6AewLTigWG4xSOukaG",
+      "voice_name": "Josh",
+      "voice_description": "Voz masculina joven, adecuada para desarrolladores"
+    },
+    {
+      "speaker_name": "Diseñador",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina creativa, adecuada para diseñadores"
+    },
+    {
+      "speaker_name": "Agente",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina profesional para agentes de soporte"
+    },
+    {
+      "speaker_name": "Cliente",
+      "voice_id": "AZnzlk1XvdvUeBnXmlld",
+      "voice_name": "Domi",
+      "voice_description": "Voz masculina natural para clientes"
+    },
+    {
+      "speaker_name": "Recepcionista",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina amigable para recepcionistas"
+    },
+    {
+      "speaker_name": "Entrevistador",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina profesional para entrevistadores"
+    },
+    {
+      "speaker_name": "Candidato",
+      "voice_id": "VR6AewLTigWG4xSOukaG",
+      "voice_name": "Josh",
+      "voice_description": "Voz masculina joven para candidatos"
+    },
+    {
+      "speaker_name": "Alex",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina amigable para conversaciones casuales"
+    },
+    {
+      "speaker_name": "Sam",
+      "voice_id": "AZnzlk1XvdvUeBnXmlld",
+      "voice_name": "Domi",
+      "voice_description": "Voz masculina amigable para conversaciones casuales"
+    },
+    {
+      "speaker_name": "Asesor",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina profesional para asesores financieros"
+    },
+    {
+      "speaker_name": "Farmacéutico",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina conocedora para farmacéuticos"
+    },
+    {
+      "speaker_name": "Taxista",
+      "voice_id": "AZnzlk1XvdvUeBnXmlld",
+      "voice_name": "Domi",
+      "voice_description": "Voz masculina casual para taxistas"
+    },
+    {
+      "speaker_name": "Pasajero",
+      "voice_id": "VR6AewLTigWG4xSOukaG",
+      "voice_name": "Josh",
+      "voice_description": "Voz masculina natural para pasajeros"
+    },
+    {
+      "speaker_name": "Profesor",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina educativa para profesores"
+    },
+    {
+      "speaker_name": "Estudiante",
+      "voice_id": "VR6AewLTigWG4xSOukaG",
+      "voice_name": "Josh",
+      "voice_description": "Voz masculina joven para estudiantes"
+    },
+    {
+      "speaker_name": "Cardiólogo",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina profesional para cardiólogos"
+    },
+    {
+      "speaker_name": "Oncólogo",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina autoritaria para oncólogos"
+    },
+    {
+      "speaker_name": "Radio-oncólogo",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina autoritaria para radio-oncólogos"
+    },
+    {
+      "speaker_name": "Neurocirujano",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina precisa para neurocirujanos"
+    },
+    {
+      "speaker_name": "Neurólogo",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina calmada para neurólogos"
+    },
+    {
+      "speaker_name": "Residente",
+      "voice_id": "VR6AewLTigWG4xSOukaG",
+      "voice_name": "Josh",
+      "voice_description": "Voz masculina joven para residentes médicos"
+    },
+    {
+      "speaker_name": "Enfermera",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina clara y profesional para enfermeras"
+    },
+    {
+      "speaker_name": "Psiquiatra",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina empática para psiquiatras"
+    },
+    {
+      "speaker_name": "Nefrólogo",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina técnica para nefrólogos"
+    },
+    {
+      "speaker_name": "Infectólogo",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina detallada para infectólogos"
+    },
+    {
+      "speaker_name": "Cirujano",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina autoritaria para cirujanos"
+    },
+    {
+      "speaker_name": "Anestesiólogo",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina calmada para anestesiólogos"
+    },
+    {
+      "speaker_name": "Perfusionista",
+      "voice_id": "VR6AewLTigWG4xSOukaG",
+      "voice_name": "Josh",
+      "voice_description": "Voz masculina técnica para perfusionistas"
+    },
+    {
+      "speaker_name": "Endocrinólogo",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina explicativa para endocrinólogos"
+    },
+    {
+      "speaker_name": "Gastroenterólogo",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina detallada para gastroenterólogos"
+    },
+    {
+      "speaker_name": "Endoscopista",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina técnica para endoscopistas"
+    },
+    {
+      "speaker_name": "Reumatólogo",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina empática para reumatólogos"
+    },
+    {
+      "speaker_name": "Neumólogo",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina respiratoria para neumólogos"
+    },
+    {
+      "speaker_name": "Intensivista",
+      "voice_id": "pNInz6obpgDQGcFmaJgB",
+      "voice_name": "Adam",
+      "voice_description": "Voz masculina urgente para intensivistas"
+    },
+    {
+      "speaker_name": "Dermatólogo",
+      "voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "voice_name": "Sarah",
+      "voice_description": "Voz femenina clara para dermatólogos"
+    },
+    {
+      "speaker_name": "Padre",
+      "voice_id": "AZnzlk1XvdvUeBnXmlld",
+      "voice_name": "Domi",
+      "voice_description": "Voz masculina preocupada para padres"
+    },
+    {
+      "speaker_name": "Madre",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "voice_name": "Rachel",
+      "voice_description": "Voz femenina angustiada para madres"
+    },
+    {
+      "speaker_name": "Familiar",
+      "voice_id": "AZnzlk1XvdvUeBnXmlld",
+      "voice_name": "Domi",
+      "voice_description": "Voz masculina familiar preocupada"
+    }
+  ],
+  "audio_config": {
+    "model_id": "eleven_v3",
+    "output_format": "mp3_44100_128",
+    "stability": 0.5,
+    "use_speaker_boost": true,
+    "apply_text_normalization": "auto",
+    "use_audio_tags": true,
+    "language_code": null
+  },
+  "audio_file_path": "generated_datasets/batch_oncology_rounds_01/oncology_rounds_01_95b55bb4_conversation.mp3",
+  "transcript_file_path": "generated_datasets/batch_oncology_rounds_01/oncology_rounds_01_95b55bb4_transcript.json",
+  "created_at": "2025-09-07T17:47:53.983993",
+  "stt_evaluation_ready": true
+}
