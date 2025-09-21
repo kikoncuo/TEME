@@ -24,6 +24,38 @@ cd Dataset_creation
 pip install -r requirements.txt
 ```
 
+2.b Requisito del sistema: FFmpeg (obligatorio)
+
+FFmpeg es necesario para la manipulación/convertido de audio (usado por pydub y para convertir WAV↔MP3).
+
+- macOS (Homebrew):
+```bash
+brew install ffmpeg
+```
+
+- Linux (Debian/Ubuntu):
+```bash
+sudo apt update && sudo apt install -y ffmpeg
+```
+
+- Linux (Fedora/RHEL):
+```bash
+sudo dnf install -y ffmpeg
+```
+
+- Windows (winget o Chocolatey):
+```powershell
+# Con Chocolatey
+choco install ffmpeg
+```
+
+Verificación rápida:
+```bash
+ffmpeg -version
+```
+
+Recuerda refrescar tu app o terminal si ffmpeg -version is not found before running the commands
+
 3. Configura las claves API:
 ```bash
 # Crea un archivo .env con tus claves API
@@ -92,6 +124,39 @@ python cli.py generate --scenarios scenarios.json --single --tts-provider gemini
 # Para todo el lote
 python cli.py generate --scenarios scenarios.json --max-concurrent 3 --tts-provider gemini
 ```
+
+### 4. Generar audio desde un transcript existente
+
+Cuando ya tienes un archivo JSON de transcripción (estructura `GeneratedConversation`) y solo quieres sintetizar el audio:
+
+#### ElevenLabs (premium)
+```bash
+python cli.py synthesize-from-transcript \
+  --transcript generated_datasets/gemini_test_medication/cardiology_consultation_01_b6e406b1_transcript.json \
+  --language es \
+  --tts-provider elevenlabs
+```
+
+#### Google Gemini TTS (gratuito)
+```bash
+python cli.py synthesize-from-transcript \
+  --transcript generated_datasets/gemini_test_medication/cardiology_consultation_01_b6e406b1_transcript.json \
+  --language es \
+  --tts-provider gemini
+```
+
+Opcional: usar tus propios mapeos de voces
+```bash
+python cli.py synthesize-from-transcript \
+  -t path/to/transcript.json \
+  -l en \
+  --tts-provider gemini \
+  --voice-mappings voice_mappings_gemini_en.json
+```
+
+Notas:
+- Si no pasas `--output`, el archivo se creará junto al transcript como `<base>_conversation.mp3` (ElevenLabs) o `<base>_conversation.wav` (Gemini).
+- Si no pasas `--voice-mappings`, se cargarán automáticamente los mapeos por idioma y proveedor.
 
 ## Guía Paso a Paso Completa
 

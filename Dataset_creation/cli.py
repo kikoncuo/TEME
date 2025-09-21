@@ -10,7 +10,7 @@ from typing import List, Optional
 from dotenv import load_dotenv
 from dataset_generator import STTDatasetGenerator
 from openai_client import create_sample_scenarios
-from models import ConversationScenario, AudioConfiguration, TTSProvider, GeminiAudioConfiguration
+from models import ConversationScenario, AudioConfiguration, TTSProvider, GeminiAudioConfiguration, GeneratedConversation, VoiceMapping
 
 
 @click.group()
@@ -128,6 +128,102 @@ def generate(ctx, scenarios, output_dir, batch_id, max_concurrent, single, tts_p
         import traceback
         traceback.print_exc()
 
+
+@cli.command()
+@click.option('--transcript', '-t', required=True, help='Path to transcript JSON file (GeneratedConversation schema)')
+@click.option('--output', '-o', help='Output audio file path (defaults alongside transcript)')
+@click.option('--language', '-l', default='en', help='Language code for voice mapping (e.g., en, es)')
+@click.option('--tts-provider', type=click.Choice(['elevenlabs', 'gemini']), default='elevenlabs', help='TTS provider to use')
+@click.option('--voice-mappings', type=str, help='Optional path to voice mappings JSON')
+@click.pass_context
+def synthesize_from_transcript(ctx, transcript, output, language, tts_provider, voice_mappings):
+    """Generate audio from an existing transcript JSON file."""
+    generator = ctx.obj['generator']
+
+    transcript_path = Path(transcript)
+    if not transcript_path.exists():
+        click.echo(f"✗ Transcript file not found: {transcript_path}")
+        return
+
+    # Load transcript JSON as GeneratedConversation
+    try:
+        with open(transcript_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        conversation = GeneratedConversation(**data)
+        click.echo(f"✓ Loaded transcript: {transcript_path.name}")
+        click.echo(f"  - Turns: {len(conversation.turns)}")
+    except Exception as e:
+        click.echo(f"✗ Failed to load transcript JSON: {e}")
+        return
+
+    # Determine provider and audio configuration
+    if tts_provider == 'gemini':
+        if not generator.gemini_generator:
+            click.echo("✗ Gemini TTS generator not initialized. Please ensure GOOGLE_API_KEY is set.")
+            return
+        audio_config = AudioConfiguration(provider=TTSProvider.GEMINI, gemini_config=GeminiAudioConfiguration())
+        default_ext = 'wav'
+        provider_str = 'gemini'
+    else:
+        audio_config = AudioConfiguration(provider=TTSProvider.ELEVENLABS)
+        default_ext = 'mp3'
+        provider_str = 'elevenlabs'
+
+    # Load or select voice mappings
+    mappings: List[VoiceMapping] = []
+    try:
+        if voice_mappings:
+            vm_path = Path(voice_mappings)
+            if not vm_path.exists():
+                click.echo(f"✗ Voice mappings file not found: {vm_path}")
+                return
+            with open(vm_path, 'r', encoding='utf-8') as f:
+                raw = json.load(f)
+            mappings = [VoiceMapping(**m) for m in raw]
+        else:
+            # Use generator's loader by language and provider
+            mappings = generator._load_voice_mappings(language, 'gemini' if tts_provider == 'gemini' else 'elevenlabs')
+        click.echo(f"✓ Loaded {len(mappings)} voice mappings for language '{language}' and provider '{tts_provider}'")
+    except Exception as e:
+        click.echo(f"✗ Failed to load voice mappings: {e}")
+        return
+
+    if not mappings:
+        click.echo("⚠ No voice mappings loaded. Some turns may be skipped if speakers are unmapped.")
+
+    # Determine output path
+    if output:
+        output_path = Path(output)
+    else:
+        base = transcript_path.stem  # e.g., *_transcript
+        if base.endswith('_transcript'):
+            base = base[:-11]
+        output_filename = f"{base}_conversation.{default_ext}"
+        output_path = transcript_path.parent / output_filename
+
+    # Generate audio
+    try:
+        click.echo(f"Generating audio using {tts_provider.capitalize()} → {output_path.name}")
+        if tts_provider == 'gemini':
+            final_audio_path = generator.gemini_generator.generate_conversation_audio(
+                conversation=conversation,
+                voice_mappings=mappings,
+                config=audio_config.gemini_config,
+                output_path=output_path
+            )
+        else:
+            final_audio_path = generator.elevenlabs_generator.generate_conversation_audio(
+                conversation=conversation,
+                voice_mappings=mappings,
+                audio_config=audio_config.elevenlabs_config,
+                output_path=output_path
+            )
+
+        click.echo(f"✓ Audio generated: {final_audio_path}")
+    except Exception as e:
+        click.echo(f"✗ Failed to generate audio: {e}")
+        import traceback
+        traceback.print_exc()
 
 @cli.command()
 @click.option('--title', '-t', required=True, help='Conversation title')
