@@ -76,7 +76,7 @@ class ElevenLabsAudioConfiguration(BaseModel):
 
 class GeminiAudioConfiguration(BaseModel):
     """Configuration for audio generation with Gemini 2.5 TTS."""
-    model: str = Field("gemini-2.5-flash-preview-tts", description="Gemini model for TTS")
+    model: str = Field("gemini-2.5-pro-preview-tts", description="Gemini model for TTS")
     output_format: str = Field("wav", description="Audio output format (wav for Gemini)")
     voice_name: Optional[str] = Field(None, description="Default voice name for single-speaker")
     language_code: Optional[str] = Field(None, description="Language code (ISO 639-1)")

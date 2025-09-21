@@ -128,6 +128,10 @@ class STTDatasetGenerator:
             audio_path = output_dir / audio_filename
 
             try:
+                # Ensure language_code is set for accent control
+                if audio_config.gemini_config and not audio_config.gemini_config.language_code:
+                    lang = (scenario.language or "en").lower()
+                    audio_config.gemini_config.language_code = "es-ES" if lang.startswith("es") else "en-US"
                 print(f"Generating audio for conversation using Gemini TTS...")
                 final_audio_path = self.gemini_generator.generate_conversation_audio(
                     conversation=conversation,

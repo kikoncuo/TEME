@@ -32,6 +32,22 @@ class GeminiAudioGenerator:
 
         self.client = genai.Client(api_key=self.api_key)
 
+    def _build_style_prompt(self, voice_mappings: List[VoiceMapping], language_code: Optional[str]) -> Optional[str]:
+        """Build a speech style prompt from voice descriptions in mappings and language accent hints."""
+        lines = []
+        if language_code:
+            if language_code.lower().startswith("es"):
+                lines.append("Overall: European Spanish (es-ES), peninsular accent.")
+            elif language_code.lower().startswith("en"):
+                lines.append("Overall: English (en-US) neutral broadcast accent.")
+
+        for mapping in voice_mappings:
+            if getattr(mapping, "voice_description", None):
+                lines.append(f"- {mapping.speaker_name}: {mapping.voice_description}")
+        if not lines:
+            return None
+        return "Use the following speech styles per speaker (tone, accent, pace, emotion):\n" + "\n".join(lines)
+
     def _create_wave_file(self, filename: Path, pcm_data: bytes, channels: int = 1, rate: int = 24000, sample_width: int = 2):
         """Create a WAV file from PCM data."""
         with wave.open(str(filename), "wb") as wf:
@@ -107,6 +123,13 @@ class GeminiAudioGenerator:
 
         # Determine if this is single-speaker or multi-speaker
         unique_speakers = set(turn.speaker for turn in conversation.turns)
+
+        # Prefer explicit speech_style_prompt; otherwise derive from voice descriptions and language
+        effective_style_prompt = config.speech_style_prompt or self._build_style_prompt(voice_mappings, config.language_code)
+        if effective_style_prompt:
+            # Clone config with injected style prompt to avoid mutating caller's instance
+            config = GeminiAudioConfiguration(**config.model_dump())
+            config.speech_style_prompt = effective_style_prompt
 
         if len(unique_speakers) == 1:
             # Single-speaker conversation
@@ -238,19 +261,27 @@ class GeminiAudioGenerator:
             prompt = full_text
 
         try:
+            debug_cfg = types.GenerateContentConfig(
+                response_modalities=["AUDIO"],
+                speech_config=types.SpeechConfig(
+                    language_code=config.language_code,
+                    voice_config=types.VoiceConfig(
+                        prebuilt_voice_config=types.PrebuiltVoiceConfig(
+                            voice_name=voice_name,
+                        )
+                    )
+                ),
+            )
+            print("[Gemini][Single] model=", config.model)
+            print("[Gemini][Single] language_code=", config.language_code)
+            print("[Gemini][Single] voice_name=", voice_name)
+            if config.speech_style_prompt:
+                print("[Gemini][Single] speech_style_prompt=", (config.speech_style_prompt[:300] + '...') if len(config.speech_style_prompt) > 300 else config.speech_style_prompt)
+            print("[Gemini][Single] prompt=", (prompt[:500] + '...') if len(prompt) > 500 else prompt)
             response = self.client.models.generate_content(
                 model=config.model,
                 contents=prompt,
-                config=types.GenerateContentConfig(
-                    response_modalities=["AUDIO"],
-                    speech_config=types.SpeechConfig(
-                        voice_config=types.VoiceConfig(
-                            prebuilt_voice_config=types.PrebuiltVoiceConfig(
-                                voice_name=voice_name,
-                            )
-                        )
-                    ),
-                )
+                config=debug_cfg,
             )
 
             # Extract audio data
@@ -291,14 +322,24 @@ class GeminiAudioGenerator:
 
         # Get speaker configurations
         speaker_configs = self._get_speaker_voice_configs(voice_mappings, speakers_in_conversation)
+        if config.speech_style_prompt:
+            print("[Gemini][Multi] speech_style_prompt=", (config.speech_style_prompt[:300] + '...') if len(config.speech_style_prompt) > 300 else config.speech_style_prompt)
 
         try:
+            print("[Gemini][Multi] model=", config.model)
+            print("[Gemini][Multi] language_code=", config.language_code)
+            print("[Gemini][Multi] speakers=", sorted(list(speakers_in_conversation)))
+            # Log voice mapping summary
+            mapping_summary = {m.speaker_name: m.voice_id for m in voice_mappings if m.speaker_name in speakers_in_conversation}
+            print("[Gemini][Multi] voice_mappings=", mapping_summary)
+            print("[Gemini][Multi] prompt=", (prompt[:500] + '...') if len(prompt) > 500 else prompt)
             response = self.client.models.generate_content(
                 model=config.model,
                 contents=prompt,
                 config=types.GenerateContentConfig(
                     response_modalities=["AUDIO"],
                     speech_config=types.SpeechConfig(
+                        language_code=config.language_code,
                         multi_speaker_voice_config=types.MultiSpeakerVoiceConfig(
                             speaker_voice_configs=speaker_configs
                         )
