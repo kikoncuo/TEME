@@ -1,15 +1,16 @@
 # STT Dataset Generator
 
-Una herramienta para generar datasets de evaluación de sistemas de reconocimiento de voz (STT) usando OpenAI para generar transcripciones estructuradas y ElevenLabs para crear conversaciones de audio.
+Una herramienta para generar datasets de evaluación de sistemas de reconocimiento de voz (STT) usando OpenAI para generar transcripciones estructuradas y múltiples proveedores TTS (ElevenLabs y Google Gemini) para crear conversaciones de audio.
 
 ## Características
 
 - 🤖 **Generación automática de conversaciones** usando OpenAI 
-- 🎙️ **Síntesis de voz realista** usando ElevenLabs TTS
+- 🎙️ **Síntesis de voz realista** usando ElevenLabs TTS o Google Gemini TTS
 - 📊 **Salida estructurada** con modelos Pydantic
 - ⚡ **Procesamiento asíncrono** para generación eficiente en lotes
 - 🎛️ **Interfaz de línea de comandos** fácil de usar
 - 📁 **Organización automática** de archivos de dataset
+- 🔄 **Múltiples proveedores TTS** - ElevenLabs (premium) y Gemini (gratuito)
 
 ## Instalación
 
@@ -27,12 +28,19 @@ pip install -r requirements.txt
 ```bash
 # Crea un archivo .env con tus claves API
 echo "OPENAI_API_KEY=tu_clave_openai_aquí" > .env
+
+# Para ElevenLabs (opcional - premium)
 echo "ELEVEN_API_KEY=tu_clave_elevenlabs_aquí" >> .env
+
+# Para Google Gemini TTS (opcional - gratuito)
+echo "GOOGLE_API_KEY=tu_clave_google_aquí" >> .env
 ```
 
 ## Uso Rápido
 
 ### 1. Generar una conversación rápida
+
+#### Con ElevenLabs (premium)
 ```bash
 python cli.py quick-generate \
   --title "Consulta Médica" \
@@ -41,8 +49,23 @@ python cli.py quick-generate \
   --participants "Doctor,Paciente" \
   --duration 90 \
   --difficulty medium \
-  --domain medical
-  --language es
+  --domain medical \
+  --language es \
+  --tts-provider elevenlabs
+```
+
+#### Con Google Gemini TTS (gratuito)
+```bash
+python cli.py quick-generate \
+  --title "Consulta Médica" \
+  --description "Un doctor consulta con un paciente sobre síntomas" \
+  --context "Consultorio médico" \
+  --participants "Doctor,Paciente" \
+  --duration 90 \
+  --difficulty medium \
+  --domain medical \
+  --language es \
+  --tts-provider gemini
 ```
 
 ### 2. Crear configuración de muestra
@@ -51,12 +74,23 @@ python cli.py create-sample-config --output scenarios.json
 ```
 
 ### 3. Generar dataset desde configuración
+
+#### Con ElevenLabs
 ```bash
 # Para un único escenario (prueba)
-python cli.py generate --scenarios scenarios.json --single
+python cli.py generate --scenarios scenarios.json --single --tts-provider elevenlabs
 
 # Para todo el lote
-python cli.py generate --scenarios scenarios.json --max-concurrent 3
+python cli.py generate --scenarios scenarios.json --max-concurrent 3 --tts-provider elevenlabs
+```
+
+#### Con Google Gemini TTS
+```bash
+# Para un único escenario (prueba)
+python cli.py generate --scenarios scenarios.json --single --tts-provider gemini
+
+# Para todo el lote
+python cli.py generate --scenarios scenarios.json --max-concurrent 3 --tts-provider gemini
 ```
 
 ## Guía Paso a Paso Completa
@@ -76,10 +110,16 @@ Crea un archivo `.env` en el directorio raíz:
 ```bash
 # API Keys requeridas
 OPENAI_API_KEY=your_openai_api_key_here
-ELEVEN_API_KEY=your_elevenlabs_api_key_here
+
+# TTS Provider Keys (al menos una requerida)
+ELEVEN_API_KEY=your_elevenlabs_api_key_here      # Para ElevenLabs (premium)
+GOOGLE_API_KEY=your_google_api_key_here          # Para Google Gemini TTS (gratuito)
 ```
 
-**Nota**: Asegúrate de que las claves API tengan permisos adecuados para usar GPT-4 y ElevenLabs TTS.
+**Nota**: Asegúrate de que las claves API tengan permisos adecuados:
+- **OpenAI**: Para usar GPT-4 en generación de conversaciones
+- **ElevenLabs**: Para síntesis de voz premium (requiere suscripción)
+- **Google**: Para Gemini TTS (gratuito con cuotas)
 
 ### Paso 2: Preparar Archivos de Configuración
 
@@ -246,6 +286,7 @@ python cli.py info \
 # 1. Configurar API keys
 echo "OPENAI_API_KEY=sk-..." > .env
 echo "ELEVEN_API_KEY=..." >> .env
+echo "GOOGLE_API_KEY=..." >> .env
 
 # 2. Crear escenarios médicos de ejemplo
 python cli.py create-sample-config
@@ -253,11 +294,19 @@ python cli.py create-sample-config
 # 3. Editar escenarios para especialidades específicas
 # (editar scenarios.json manualmente)
 
-# 4. Generar dataset básico
+# 4. Generar dataset básico con ElevenLabs (premium)
 python cli.py generate \
   --scenarios scenarios.json \
   --max-concurrent 3 \
-  --language es
+  --language es \
+  --tts-provider elevenlabs
+
+# O con Google Gemini TTS (gratuito)
+python cli.py generate \
+  --scenarios scenarios.json \
+  --max-concurrent 3 \
+  --language es \
+  --tts-provider gemini
 
 # 5. Añadir variabilidad para evaluación robusta
 python cli.py process-audio \
@@ -578,6 +627,28 @@ accuracy = calculate_accuracy(predicted_text, reference_text)
 ValueError: OpenAI API key is required
 ```
 → Asegúrate de que el archivo `.env` esté presente con claves API válidas
+
+### Error de Proveedor TTS
+```
+ValueError: Gemini TTS generator not initialized
+```
+→ Configura `GOOGLE_API_KEY` en tu archivo `.env` para usar Gemini TTS
+
+### Comparación de Proveedores TTS
+
+| Característica | ElevenLabs | Google Gemini |
+|----------------|------------|---------------|
+| **Costo** | Premium (pago) | Gratuito (con cuotas) |
+| **Calidad** | Excelente | Buena |
+| **Voces** | Múltiples opciones | Voces estándar |
+| **Latencia** | Baja | Media |
+| **Límites** | Según plan | Cuotas diarias |
+
+### Recomendaciones de Uso
+
+- **Para desarrollo/pruebas**: Usa Gemini TTS (gratuito)
+- **Para producción**: Usa ElevenLabs (mejor calidad)
+- **Para grandes volúmenes**: Combina ambos según necesidades
 
 ### Error de Voz No Encontrada
 ```
